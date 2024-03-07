@@ -10,7 +10,7 @@ import os
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
 IMAGE_DISPLAY_TIME = 0.8  # 800 ms
 TARGET_FREQ = 0.9
-TRIAL_N = 50 # 75 trials = 1 minute
+TRIAL_N = 30 # 75 trials = 1 minute
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -25,7 +25,7 @@ city_images = [f'images/city/city_{i}.jpg' for i in range(10)]
 mountain_images = [f'images/mountains/mountain_{i}.jpg' for i in range(10)]
 
 # Setup the window
-win = visual.Window(size=(SCREEN_WIDTH, SCREEN_HEIGHT), fullscr=False)
+win = visual.Window(size=(SCREEN_WIDTH, SCREEN_HEIGHT), fullscr=True)
 
 # Preload all images
 preloaded_city_images = [visual.ImageStim(win, image=img, size=(1, 1)) for img in city_images]
