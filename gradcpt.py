@@ -2,6 +2,9 @@ from typing import TypedDict, Optional, Tuple, List
 from time import perf_counter
 from psychopy import visual, core, event
 from scipy.ndimage import gaussian_filter1d
+from pyslsl import StreamInfo, StreamOutlet
+from eeg import EEG
+from utils import generate_save_fn
 import numpy as np
 import random
 import os
@@ -30,6 +33,23 @@ win = visual.Window(size=(SCREEN_WIDTH, SCREEN_HEIGHT), fullscr=True)
 # Preload all images
 preloaded_city_images = [visual.ImageStim(win, image=img, size=(1, 1)) for img in city_images]
 preloaded_mountain_images = [visual.ImageStim(win, image=img, size=(1, 1)) for img in mountain_images]
+
+# Set up marker stream
+info = StreamInfo("Markers", "Markers", 1, 0, "int32", "myuidw43536")
+outlet = StreamOutlet(info)
+markernames = [1, 2]
+
+# EEG device
+board_name = "muse2"
+eeg_device = EEG(device=board_name)
+
+# Create save file name
+subject_id = 1  # or any identifier for the subject
+session_nb = 1  # session number
+save_fn = generate_save_fn(board_name, "your_experiment_name", subject_id, session_nb)
+
+# Start device
+eeg_device.start(save_fn, duration=None)
 
 def transitionImages(from_img: visual.ImageStim, to_img:visual.ImageStim) -> List[float]:
     transition_clock = core.Clock()
@@ -80,7 +100,11 @@ def record_responses() -> Tuple[float, float, List[Trial]]:
     for i in range(TRIAL_N):
         trial_clock = core.Clock()
         next_image, is_mountain = get_image(last_image)
+
+        marker_timestamp = time()
+        outlet.push_sample(markernames[0 if not is_mountain else 1], marker_timestamp)
         responses = transitionImages(last_image, next_image)
+
         trials.append({'is_mountain': is_mountain, 'responses': responses})
         last_image = next_image
         
@@ -179,5 +203,6 @@ if __name__ == "__main__":
     save_results(start_timestamp, end_timestamp, labels)
     
 # Close the window
+eeg_device.stop()
 win.close()
 core.quit()

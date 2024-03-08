@@ -12,3 +12,4 @@ dependencies:
   - pyparallel; platform_system != "Windows"
   - SoundFile; platform_system == "Windows"
   - websocket_client
+  - pylsl==1.10.5 
