@@ -1,4 +1,4 @@
-name: psychopy-env
+name: measure-attention-eeg
 channels:
 - conda-forge
 dependencies:
