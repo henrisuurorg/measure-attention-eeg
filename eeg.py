@@ -1,23 +1,13 @@
 import sys
 import time
 import logging
-from time import sleep
 from multiprocessing import Process
 
 import numpy as np
 import pandas as pd
 
-from brainflow.board_shim import BoardShim, BoardIds, BrainFlowInputParams
 from muselsl import stream, list_muses, record, constants as mlsl_cnsts
 from pylsl import StreamInfo, StreamOutlet, StreamInlet, resolve_byprop
-
-from eegnb.devices.utils import (
-    get_openbci_usb,
-    create_stim_array,
-    SAMPLE_FREQS,
-    EEG_INDICES,
-    EEG_CHANNELS,
-)
 
 
 logger = logging.getLogger(__name__)
@@ -36,17 +26,12 @@ class EEG:
 
 
     def _init_muselsl(self):
-        """Initialize the MuseLSL backend."""
-        # Assuming LSL stream is already being broadcasted by another app (e.g., Muse Direct or BlueMuse)
-        streams = resolve_byprop('type', 'EEG', timeout=2)
-        if streams:
-            self.inlet = StreamInlet(streams[0], max_chunklen=12)
-        else:
-            logger.error("Can't find EEG stream.")
+        self._muse_recent_inlet = None
 
+    def start(self, fn, duration):
+        if fn:
+            self.save_fn = fn
 
-
-    def start(self, duration):
         if sys.platform in ["linux", "linux2", "darwin"]:
             # Look for muses
             self.muses = list_muses()
@@ -116,4 +101,7 @@ class EEG:
                 ch_names.append(lab)
 
         df = pd.DataFrame(samples, index=timestamps, columns=ch_names)
+        sorted_cols = sorted(df.columns)
+        df = df[sorted_cols]
+
         return df

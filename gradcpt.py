@@ -49,7 +49,7 @@ session_nb = 1  # session number
 save_fn = generate_save_fn(board_name, "your_experiment_name", subject_id, session_nb)
 
 # Start device
-eeg_device.start(save_fn, duration=None)
+eeg_device.start(save_fn, None)
 
 def transitionImages(from_img: visual.ImageStim, to_img:visual.ImageStim) -> List[float]:
     transition_clock = core.Clock()

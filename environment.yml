@@ -1,15 +1,16 @@
 name: measure-attention-eeg
 channels:
-- conda-forge
+  - conda-forge
 dependencies:
-- python=3.8
-- psychopy
-- pip
-- pip:
-  - psychtoolbox
-  - pygame
-  - pyo
-  - pyparallel; platform_system != "Windows"
-  - SoundFile; platform_system == "Windows"
-  - websocket_client
-  - pylsl==1.10.5 
+  - python=3.8
+  - psychopy
+  - pip
+  - pip:
+      - psychtoolbox
+      - pygame
+      - pyo
+      - pyparallel; platform_system != "Windows"
+      - SoundFile; platform_system == "Windows"
+      - websocket_client
+      - pylsl==1.10.5
+      - muselsl
