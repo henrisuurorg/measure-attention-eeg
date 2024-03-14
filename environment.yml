@@ -1,4 +1,4 @@
-name: measure-attention-eeg
+name: eeg-env
 channels:
   - conda-forge
 dependencies:

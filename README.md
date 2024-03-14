@@ -1,7 +1,7 @@
 # labelling
 
 ### Create env
-`conda env create -n psychopy-env -f psychopy-env.yml`
+`conda env create -n eeg-env`
 
 ### Update env
-`conda env update -f psychopy-env.yml`
+`conda env update`
