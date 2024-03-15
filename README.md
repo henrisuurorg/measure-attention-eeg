@@ -7,7 +7,7 @@ Implement the GradCPT psychological test as a means to label attention states. U
 [Miniconda download](https://docs.anaconda.com/free/miniconda/)
 
 ### Create and activate env
-`conda env create -n eeg-env`
+`conda env create -n eeg-env` and then
 `conda activate eeg-env`
 
 ### Run the experiment
