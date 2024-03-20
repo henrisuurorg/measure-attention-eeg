@@ -12,9 +12,10 @@ import csv
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
-IMAGE_DISPLAY_TIME = 0.8  # 800 ms
+IMAGE_DISPLAY_TIME = 0.8005  # 800.5 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
-TRIAL_N = 75 # 75 trials = 1 minute
+TRIAL_N = 75 * 10 # 75 trials = 1 minute
+EEG_DURATION = 15 + 60 * 10 # 15 seconds of buffer
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -51,7 +52,7 @@ session_nb = 1  # session number
 save_fn = generate_save_fn(board_name, "GradCPT", subject_id, session_nb)
 
 # Start device
-eeg.start(save_fn, 70)
+eeg.start(save_fn, EEG_DURATION)
 
 def transitionImages(from_img: visual.ImageStim, to_img:visual.ImageStim) -> List[float]:
     transition_clock = core.Clock()

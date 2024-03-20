@@ -1,0 +1,14 @@
+name: training-env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - jupyter
+  - pandas
+  - numpy
+  - scipy
+  - pywavelets  # PyWavelets is installed with the package name 'pywavelets', not 'pywt'
+  - pip
+  - scikit-learn
+  - matplotlib
