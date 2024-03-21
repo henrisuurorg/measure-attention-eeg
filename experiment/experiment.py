@@ -14,8 +14,8 @@ import csv
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
 IMAGE_DISPLAY_TIME = 0.8005  # 800.5 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
-TRIAL_N = 75 * 10 # 75 trials = 1 minute
-EEG_DURATION = 15 + 60 * 10 # 15 seconds of buffer
+TRIAL_N = 75 * 1 # 75 trials = 1 minute
+EEG_DURATION = 15 + 60 * 1 # 15 seconds of buffer
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
