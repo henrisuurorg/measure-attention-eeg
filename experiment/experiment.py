@@ -44,7 +44,8 @@ markernames = [1, 2]
 
 # EEG device
 board_name = "muse2"
-eeg = EEG(device=board_name)
+mac_addr = "00:55:DA:B5:AB:4C"
+eeg = EEG(device=board_name, mac_addr=mac_addr)
 
 # Create save file name
 subject_id = 1  # or any identifier for the subject

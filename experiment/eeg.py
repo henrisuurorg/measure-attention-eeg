@@ -104,13 +104,8 @@ class EEG:
 
     def _start_muse(self, duration):
         if sys.platform in ["linux", "linux2", "darwin"]:
-            # Look for muses
-            self.muses = list_muses()
-            # self.muse = muses[0]
-
-            # Start streaming process
             self.stream_process = Process(
-                target=stream, args=(self.muses[0]["address"],)
+                target=stream, args=(self.mac_address,)
             )
             self.stream_process.start()
 

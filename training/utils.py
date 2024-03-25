@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import entropy, skew, ttest_ind
 from scipy.ndimage import binary_closing, binary_opening
-from scipy.signal import filtfilt, butter
+from scipy.signal import filtfilt, butter, welch
 
 
 def decompose_segment(segment, wavelet='sym3', max_level=5):
@@ -62,34 +62,34 @@ def synchronize_trials(eeg_df, gradcpt_df):
     return eeg_df_aligned, gradcpt_df_aligned
 
 def top_bot_25(feature_df):
-    t_values = []
-    feature_names = []
+        t_values = []
+        feature_names = []
 
-    # Perform t-test for each feature against 'in_the_zone'
-    for column in feature_df.columns[:-1]:  # Exclude the last column ('in_the_zone')
-        t_stat, p_val = ttest_ind(feature_df[column], feature_df['in_the_zone'], nan_policy='omit')
-        t_values.append(t_stat)
-        feature_names.append(column)
+        # Perform t-test for each feature against 'in_the_zone'
+        for column in feature_df.columns[:-1]:  # Exclude the last column ('in_the_zone')
+            t_stat, p_val = ttest_ind(feature_df[column], feature_df['in_the_zone'], nan_policy='omit')
+            t_values.append(t_stat)
+            feature_names.append(column)
 
-    # Create a DataFrame to store features and their corresponding t-values
-    t_values_df = pd.DataFrame({'Feature': feature_names, 'T-value': t_values})
+        # Create a DataFrame to store features and their corresponding t-values
+        t_values_df = pd.DataFrame({'Feature': feature_names, 'T-value': t_values})
 
-    # Sort the DataFrame by the absolute t-values
-    t_values_df['Abs T-value'] = t_values_df['T-value'].abs()
-    t_values_df_sorted = t_values_df.sort_values(by='Abs T-value', ascending=False)
+        # Sort the DataFrame by the absolute t-values
+        t_values_df['Abs T-value'] = t_values_df['T-value'].abs()
+        t_values_df_sorted = t_values_df.sort_values(by='Abs T-value', ascending=False)
 
-    # Select the 25 most important features
-    top_25_features = t_values_df_sorted.head(25)
+        # Select the 25 most important features
+        top_25_features = t_values_df_sorted.head(25)
 
-    # Select the 25 least important features
-    bottom_25_features = t_values_df_sorted.tail(25)
+        # Select the 25 least important features
+        bottom_25_features = t_values_df_sorted.tail(25)
 
-    # You can now print or further analyze these subsets
-    print("Top 25 Most Important Features:")
-    print(top_25_features)
+        # You can now print or further analyze these subsets
+        print("Top 25 Most Important Features:")
+        print(top_25_features)
 
-    print("\nBottom 25 Least Important Features:")
-    print(bottom_25_features)
+        print("\nBottom 25 Least Important Features:")
+        print(bottom_25_features)
 
 # FEATURES
 def approximate_entropy(signal, m=2, r=None):
@@ -134,7 +134,44 @@ def energy(signal):
 def skewness(signal):
     return skew(signal)
 
-def extract_features(channel, segments, gradcpt_df):
+def power_spectral_density(signal, fs=256):
+    f, Pxx = welch(signal, fs=fs)
+    return f, Pxx
+
+def spectral_entropy(signal, fs=256, method='fft', normalize=False):
+    if method == 'welch':
+        f, psd = welch(signal, fs=fs)
+    else:
+        psd = np.abs(np.fft.fft(signal))**2
+        psd = psd[:len(psd)//2]
+    
+    psd /= psd.sum()  # Normalize the PSD
+    se = entropy(psd, base=2)
+    
+    if normalize:
+        se /= np.log2(psd.size)
+    
+    return se
+
+def spectral_edge_frequency(signal, fs=256, edge=0.9):
+    f, Pxx = welch(signal, fs=fs)
+    cumulative_power = np.cumsum(Pxx)
+    total_power = cumulative_power[-1]
+    edge_freq = f[np.where(cumulative_power >= total_power * edge)[0][0]]
+    
+    return edge_freq
+
+def hjorth_parameters(signal):
+    activity = np.var(signal)
+    gradient = np.diff(signal)
+    mobility = np.sqrt(np.var(gradient) / activity)
+    gradient2 = np.diff(gradient)
+    mobility_derivative = np.sqrt(np.var(gradient2) / np.var(gradient))
+    complexity = mobility_derivative / mobility
+    
+    return activity, mobility, complexity
+
+def extract_features(channel, segments):
     # Define bands and features for clarity and extensibility
     bands = ['delta', 'theta', 'alpha', 'beta', 'gamma']
     
@@ -143,12 +180,26 @@ def extract_features(channel, segments, gradcpt_df):
     for i in range(len(segments)):
         segment_features = {}
         for band in bands:
-            segment_features[f'{channel}_{band}_approx_entropy'] = approximate_entropy(segments[i][band])
-            segment_features[f'{channel}_{band}_total_variation'] = total_variation(segments[i][band])
-            segment_features[f'{channel}_{band}_standard_deviation'] = standard_deviation(segments[i][band])
-            segment_features[f'{channel}_{band}_energy'] = energy(segments[i][band])
-            segment_features[f'{channel}_{band}_skewness'] = skewness(segments[i][band])
-    
+            signal = segments[i][band]  # Assuming each segment is a dict with band-labeled keys
+            
+            # Existing features
+            segment_features[f'{channel}_{band}_approx_entropy'] = approximate_entropy(signal)
+            segment_features[f'{channel}_{band}_total_variation'] = total_variation(signal)
+            segment_features[f'{channel}_{band}_standard_deviation'] = standard_deviation(signal)
+            segment_features[f'{channel}_{band}_energy'] = energy(signal)
+            segment_features[f'{channel}_{band}_skewness'] = skewness(signal)
+            
+            # New features
+            _, psd = power_spectral_density(signal)
+            segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
+            segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
+            segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
+            
+            # Hjorth parameters (as separate features)
+            activity, mobility, complexity = hjorth_parameters(signal)
+            segment_features[f'{channel}_{band}_hjorth_activity'] = activity
+            segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
+            segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
         features_data.append(segment_features)
     
     # Now, for each segment, append features from preceding 9 windows
@@ -166,7 +217,6 @@ def extract_features(channel, segments, gradcpt_df):
     
     # Create a DataFrame from the augmented features data
     features_df = pd.DataFrame(augmented_features_data)
-    features_df['in_the_zone'] = gradcpt_df['in_the_zone']
     features_df.fillna(0, inplace=True)
 
     return features_df
