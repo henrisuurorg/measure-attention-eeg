@@ -12,10 +12,10 @@ import csv
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
-IMAGE_DISPLAY_TIME = 0.8005  # 800.5 ms (because 256 Hz of the EEG does not allow for 800ms windows)
+IMAGE_DISPLAY_TIME = 0.8006  # 800.6 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
 TRIAL_N = 75 * 1 # 75 trials = 1 minute
-EEG_DURATION = 15 + 60 * 1 # 15 seconds of buffer
+EEG_DURATION = 25 + 60 * 1 # 15 seconds of buffer + n minutes
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -54,6 +54,18 @@ save_fn = generate_save_fn(board_name, "GradCPT", subject_id, session_nb)
 
 # Start device
 eeg.start(save_fn, EEG_DURATION)
+
+def show_intructions():
+    instruction_clock = core.Clock()
+    instruction_text = '\nWelcome to the GradCPT experiment!\nStay still, focus on the centre of the screen, and try not to blink. \n The experiment will start in 20 seconds'
+
+    text = visual.TextStim(win=win, text=instruction_text, color=[-1, -1, -1])
+    text.draw()
+    win.flip()
+
+    while instruction_clock.getTime() < 20:
+        core.wait(0.05)
+    
 
 def transitionImages(from_img: visual.ImageStim, to_img:visual.ImageStim) -> List[float]:
     transition_clock = core.Clock()
@@ -194,6 +206,7 @@ def save_results(labels: List[Tuple[float, int, bool]]):
         writer.writerows([headers] + labels)
 
 if __name__ == "__main__":
+    show_intructions()
     raw_responses = record_responses()
     responses, start_timestamps, is_mountains = process_responses(raw_responses)
     labels = label(responses, start_timestamps, is_mountains)
