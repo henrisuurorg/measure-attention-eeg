@@ -34,8 +34,8 @@ mountain_images = [f'images/mountains/mountain_{i}.jpg' for i in range(10)]
 win = visual.Window(size=(SCREEN_WIDTH, SCREEN_HEIGHT), fullscr=True)
 
 # Preload all images
-preloaded_city_images = [visual.ImageStim(win, image=img, size=(1, 1)) for img in city_images]
-preloaded_mountain_images = [visual.ImageStim(win, image=img, size=(1, 1)) for img in mountain_images]
+preloaded_city_images = [visual.ImageStim(win, image=img, size=(0.7, 0.7)) for img in city_images]
+preloaded_mountain_images = [visual.ImageStim(win, image=img, size=(0.7, 0.7)) for img in mountain_images]
 
 # Set up marker stream
 info = StreamInfo("Markers", "Markers", 1, 0, "int32", "myuidw43536")
