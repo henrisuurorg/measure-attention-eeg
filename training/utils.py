@@ -5,6 +5,113 @@ from scipy.stats import entropy, skew, ttest_ind
 from scipy.ndimage import binary_closing, binary_opening
 from scipy.signal import filtfilt, butter, welch
 
+def synchronize_trials(eeg_df, gradcpt_df):
+    gradcpt_df = gradcpt_df[3:].reset_index(drop=True) # drop first 2 trials because they can be unstable
+    start_diff = eeg_df['timestamps'][0] - gradcpt_df['start_timestamp'][0]
+
+    if start_diff < 0:
+        # If eeg_data starts earlier, align it to gradcpt_data
+        closest_idx = (eeg_df['timestamps'] - gradcpt_df['start_timestamp'][0]).abs().idxmin()
+        eeg_df_aligned = eeg_df[closest_idx-1:].reset_index(drop=True)
+        gradcpt_df_aligned = gradcpt_df.copy()
+    else:
+        # If gradcpt_data starts earlier, find the point where eeg_data starts
+        i = next(i for i, ts in enumerate(gradcpt_df['start_timestamp']) if ts > eeg_df['timestamps'][0])
+        gradcpt_df_aligned = gradcpt_df[i:].reset_index(drop=True)
+        closest_idx = (eeg_df['timestamps'] - gradcpt_df_aligned['start_timestamp'][0]).abs().idxmin()
+        eeg_df_aligned = eeg_df[closest_idx-1:].reset_index(drop=True)
+    
+    # Check if EEG data ends before gradcpt data
+    required_eeg_length = len(gradcpt_df_aligned) * 205
+    if len(eeg_df_aligned) < required_eeg_length:
+        # Calculate the number of gradcpt samples that can be supported by the available eeg samples
+        supported_gradcpt_samples = len(eeg_df_aligned) // 205
+        gradcpt_df_aligned = gradcpt_df_aligned[:supported_gradcpt_samples].reset_index(drop=True)
+        print('Gradcpt data had to be truncated')
+
+    return eeg_df_aligned, gradcpt_df_aligned
+
+def z_normalize_column(column):
+    mean = column.mean()
+    std = column.std()
+    return (column - mean) / std
+
+def remove_artifacts_from_column(column, fs=256, threshold=3, window_ms=450):
+    """
+    Remove EOG artifacts from a Series representing an EEG signal.
+
+    Parameters:
+    - column: Pandas Series containing the EEG data.
+    - fs: Sampling frequency in Hz. Default is 256Hz.
+    - threshold: The threshold value used to detect artifacts. Default is 3.
+    - window_ms: Duration of the EOG event window in milliseconds. Default is 450ms.
+
+    Returns:
+    - A Series with the artifacts removed.
+    """
+    window_samples = int((window_ms / 1000) * fs)  # Convert window duration from ms to samples
+
+    eog_peaks = np.where(np.abs(column) > threshold)[0]
+    eog_regions = np.zeros_like(column, dtype=bool)
+    for peak in eog_peaks:
+        start = max(peak - window_samples // 2, 0)
+        end = min(peak + window_samples // 2, len(column))
+        eog_regions[start:end] = True
+
+    structuring_element = np.ones(window_samples)
+    eog_regions_closed = binary_closing(eog_regions, structure=structuring_element)
+    eog_regions_cleaned = binary_opening(eog_regions_closed, structure=structuring_element)
+
+    artifact_removed = column.copy()
+    for start in np.where(np.diff(eog_regions_cleaned.astype(int)) == 1)[0] + 1:
+        end = start + np.where(eog_regions_cleaned[start:] == False)[0][0]
+        replacement_length = end - start
+        replacement_start = max(start - replacement_length, 0)
+
+        if start == 0:  # If the artifact is at the very start
+            replacement_values = column[end:end+replacement_length]  # Use following clean segment
+        else:
+            replacement_values = artifact_removed[replacement_start:replacement_start+replacement_length]
+
+        artifact_removed[start:end] = replacement_values.values
+
+    return artifact_removed
+
+def bandpass(column, lowcut=0.5, highcut=50.0, fs=256, order=5):
+    # Butterworth filter
+    nyquist_freq = 0.5 * fs
+    low = lowcut / nyquist_freq
+    high = highcut / nyquist_freq
+    b, a = butter(order, [low, high], btype="band")
+    return filtfilt(b, a, column)
+
+def time_diff(eeg_df, gradcpt_df):
+    segment_samples = 205
+
+    num_segments = len(gradcpt_df['in_the_zone'])
+    diffs = []
+    for i in range(num_segments):
+        eeg_i = i*segment_samples
+        diff = (eeg_df['timestamps'][eeg_i] - gradcpt_df['start_timestamp'][i]) * 1000 # ms
+        diffs.append(diff)
+    
+    return diffs
+
+def segment_column(column, gradcpt_df):
+# 256*0.8=204.8 ||| 204*(1/256)=0,7969 and 205*(1/256)=0,8008
+# 205 is closer to 800 and gradcpt usually takes a fraction of ms longer than 800ms
+    segment_samples = 205
+    
+    num_segments = len(gradcpt_df['in_the_zone'])
+    segments = []
+    timestamps = []
+    for i in range(num_segments):
+        start = i * segment_samples
+        end = start + segment_samples
+        segment = column[start:end].values
+        segments.append(segment)
+
+    return segments
 
 def decompose_segment(segment, wavelet='sym3', max_level=5):
     if max_level is None:
@@ -29,37 +136,56 @@ def decompose_segment(segment, wavelet='sym3', max_level=5):
 
     return bands
 
-def segment_column(column, gradcpt_df):
-# 256*0.8=204.8 ||| 204*(1/256)=0,7969 and 205*(1/256)=0,8008
-# 205 is closer to 800 and gradcpt usually takes a fraction of ms longer than 800ms
-    segment_samples = 205
+# Features defined below
+def extract_features(channel, segments):
+    # Define bands and features for clarity and extensibility
+    bands = ['delta', 'theta', 'alpha', 'beta', 'gamma']
     
-    num_segments = len(gradcpt_df['in_the_zone'])
-    segments = []
-    for i in range(num_segments):
-        start = i * segment_samples
-        end = start + segment_samples
-        segment = column[start:end].values
-        segments.append(segment)
+    # Calculate features for each segment and store them
+    features_data = []
+    for i in range(len(segments)):
+        segment_features = {}
+        for band in bands:
+            signal = segments[i][band]  # Assuming each segment is a dict with band-labeled keys
+            
+            # Existing features
+            segment_features[f'{channel}_{band}_approx_entropy'] = approximate_entropy(signal)
+            segment_features[f'{channel}_{band}_total_variation'] = total_variation(signal)
+            segment_features[f'{channel}_{band}_standard_deviation'] = standard_deviation(signal)
+            segment_features[f'{channel}_{band}_energy'] = energy(signal)
+            segment_features[f'{channel}_{band}_skewness'] = skewness(signal)
+            
+            # New features
+            _, psd = power_spectral_density(signal)
+            segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
+            segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
+            segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
+            
+            # Hjorth parameters (as separate features)
+            activity, mobility, complexity = hjorth_parameters(signal)
+            segment_features[f'{channel}_{band}_hjorth_activity'] = activity
+            segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
+            segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
+        features_data.append(segment_features)
+    
+    # Now, for each segment, append features from preceding 9 windows
+    augmented_features_data = []
+    
+    for i in range(len(features_data)):
+        augmented_features = {}
+        for j in range(max(0, i-9), i+1):
+            for key, value in features_data[j].items():
+                # Adjust the key to include the window index relative to the current segment
+                augmented_key = f'{key}_win{j-i}'
+                augmented_features[augmented_key] = value
+                
+        augmented_features_data.append(augmented_features)
+    
+    # Create a DataFrame from the augmented features data
+    features_df = pd.DataFrame(augmented_features_data)
+    features_df.fillna(0, inplace=True)
 
-    return segments
-
-def synchronize_trials(eeg_df, gradcpt_df):
-    start_diff = eeg_df['timestamps'][0] - gradcpt_df['start_timestamp'][0]
-
-    if start_diff < 0:
-        # If eeg_data starts earlier, align it to gradcpt_data
-        closest_idx = (eeg_df['timestamps'] - gradcpt_df['start_timestamp'][0]).abs().idxmin()
-        eeg_df_aligned = eeg_df[closest_idx-1:].reset_index(drop=True)
-        gradcpt_df_aligned = gradcpt_df.copy()
-    else:
-        # If gradcpt_data starts earlier, find the point where eeg_data starts
-        i = next(i for i, ts in enumerate(gradcpt_df['start_timestamp']) if ts > eeg_df['timestamps'][0])
-        gradcpt_df_aligned = gradcpt_df[i:].reset_index(drop=True)
-        closest_idx = (eeg_df['timestamps'] - gradcpt_df_aligned['start_timestamp'][0]).abs().idxmin()
-        eeg_df_aligned = eeg_df[closest_idx-1:].reset_index(drop=True)
-
-    return eeg_df_aligned, gradcpt_df_aligned
+    return features_df
 
 def top_bot_25(feature_df):
         t_values = []
@@ -90,6 +216,55 @@ def top_bot_25(feature_df):
 
         print("\nBottom 25 Least Important Features:")
         print(bottom_25_features)
+
+def train(runs, num_features, df):
+    results = []
+    
+    for _ in range(runs):
+        from scipy.stats import ttest_ind
+        from sklearn.model_selection import StratifiedKFold, GridSearchCV
+        from sklearn.metrics import balanced_accuracy_score
+        from sklearn.svm import SVC
+        
+        features = df.iloc[:, :-1].values
+        labels = df.iloc[:, -1].values
+        
+        def select_top_features(X, y, num_features=num_features):
+            # Perform a t-test across features
+            t_stats, p_values = ttest_ind(X[y == 0], X[y == 1], axis=0)
+            # Select indices of top features based on smallest p-values
+            top_features_indices = np.argsort(np.abs(t_stats))[-num_features:]
+            return top_features_indices
+        
+        outer_cv = StratifiedKFold(n_splits=10, shuffle=True)
+        
+        balanced_acc_scores = []
+        
+        for train_index, test_index in outer_cv.split(features, labels):
+            X_train, X_test = features[train_index], features[test_index]
+            y_train, y_test = labels[train_index], labels[test_index]
+        
+            # Feature selection for the outer fold
+            top_features_indices = select_top_features(X_train, y_train)
+            X_train_selected = X_train[:, top_features_indices]
+            X_test_selected = X_test[:, top_features_indices]
+        
+            # Inner CV for hyperparameter truning
+            inner_cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
+            param_grid = {'C': [0.1, 1, 10], 'gamma': ['scale', 'auto'], 'kernel': ['rbf']}
+            grid_search = GridSearchCV(SVC(), param_grid, cv=inner_cv, scoring='balanced_accuracy')
+            grid_search.fit(X_train_selected, y_train)
+        
+            best_model = grid_search.best_estimator_
+            
+        
+            balanced_acc = balanced_accuracy_score(y_test, best_model.predict(X_test_selected))
+            balanced_acc_scores.append(balanced_acc)
+        
+        final_performance = np.mean(balanced_acc_scores)
+        results.append(round(final_performance, 3))
+  #  print(f'Runs: {results}')
+    print(f'Avg: {round((sum(results) / len(results)) * 100, 3)}%')
 
 # FEATURES
 def approximate_entropy(signal, m=2, r=None):
@@ -170,107 +345,3 @@ def hjorth_parameters(signal):
     complexity = mobility_derivative / mobility
     
     return activity, mobility, complexity
-
-def extract_features(channel, segments):
-    # Define bands and features for clarity and extensibility
-    bands = ['delta', 'theta', 'alpha', 'beta', 'gamma']
-    
-    # Calculate features for each segment and store them
-    features_data = []
-    for i in range(len(segments)):
-        segment_features = {}
-        for band in bands:
-            signal = segments[i][band]  # Assuming each segment is a dict with band-labeled keys
-            
-            # Existing features
-            segment_features[f'{channel}_{band}_approx_entropy'] = approximate_entropy(signal)
-            segment_features[f'{channel}_{band}_total_variation'] = total_variation(signal)
-            segment_features[f'{channel}_{band}_standard_deviation'] = standard_deviation(signal)
-            segment_features[f'{channel}_{band}_energy'] = energy(signal)
-            segment_features[f'{channel}_{band}_skewness'] = skewness(signal)
-            
-            # New features
-            _, psd = power_spectral_density(signal)
-            segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
-            segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
-            segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
-            
-            # Hjorth parameters (as separate features)
-            activity, mobility, complexity = hjorth_parameters(signal)
-            segment_features[f'{channel}_{band}_hjorth_activity'] = activity
-            segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
-            segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
-        features_data.append(segment_features)
-    
-    # Now, for each segment, append features from preceding 9 windows
-    augmented_features_data = []
-    
-    for i in range(len(features_data)):
-        augmented_features = {}
-        for j in range(max(0, i-9), i+1):
-            for key, value in features_data[j].items():
-                # Adjust the key to include the window index relative to the current segment
-                augmented_key = f'{key}_win{j-i}'
-                augmented_features[augmented_key] = value
-                
-        augmented_features_data.append(augmented_features)
-    
-    # Create a DataFrame from the augmented features data
-    features_df = pd.DataFrame(augmented_features_data)
-    features_df.fillna(0, inplace=True)
-
-    return features_df
-
-def z_normalize_column(column):
-    mean = column.mean()
-    std = column.std()
-    return (column - mean) / std
-
-def remove_artifacts_from_column(column, fs=256, threshold=3, window_ms=450):
-    """
-    Remove EOG artifacts from a Series representing an EEG signal.
-
-    Parameters:
-    - column: Pandas Series containing the EEG data.
-    - fs: Sampling frequency in Hz. Default is 256Hz.
-    - threshold: The threshold value used to detect artifacts. Default is 3.
-    - window_ms: Duration of the EOG event window in milliseconds. Default is 450ms.
-
-    Returns:
-    - A Series with the artifacts removed.
-    """
-    window_samples = int((window_ms / 1000) * fs)  # Convert window duration from ms to samples
-
-    eog_peaks = np.where(np.abs(column) > threshold)[0]
-    eog_regions = np.zeros_like(column, dtype=bool)
-    for peak in eog_peaks:
-        start = max(peak - window_samples // 2, 0)
-        end = min(peak + window_samples // 2, len(column))
-        eog_regions[start:end] = True
-
-    structuring_element = np.ones(window_samples)
-    eog_regions_closed = binary_closing(eog_regions, structure=structuring_element)
-    eog_regions_cleaned = binary_opening(eog_regions_closed, structure=structuring_element)
-
-    artifact_removed = column.copy()
-    for start in np.where(np.diff(eog_regions_cleaned.astype(int)) == 1)[0] + 1:
-        end = start + np.where(eog_regions_cleaned[start:] == False)[0][0]
-        replacement_length = end - start
-        replacement_start = max(start - replacement_length, 0)
-
-        if start == 0:  # If the artifact is at the very start
-            replacement_values = column[end:end+replacement_length]  # Use following clean segment
-        else:
-            replacement_values = artifact_removed[replacement_start:replacement_start+replacement_length]
-
-        artifact_removed[start:end] = replacement_values.values
-
-    return artifact_removed
-
-def bandpass(column, lowcut=0.5, highcut=50.0, fs=256, order=5):
-    # Butterworth filter
-    nyquist_freq = 0.5 * fs
-    low = lowcut / nyquist_freq
-    high = highcut / nyquist_freq
-    b, a = butter(order, [low, high], btype="band")
-    return filtfilt(b, a, column)

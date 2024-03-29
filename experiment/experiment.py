@@ -1,5 +1,5 @@
 from typing import TypedDict, Optional, Tuple, List
-from time import perf_counter, time
+from time import perf_counter, time, strftime, gmtime
 from psychopy import visual, core, event
 from scipy.ndimage import gaussian_filter1d
 from pylsl import StreamInfo, StreamOutlet
@@ -12,10 +12,10 @@ import csv
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
-IMAGE_DISPLAY_TIME = 0.8006  # 800.6 ms (because 256 Hz of the EEG does not allow for 800ms windows)
+IMAGE_DISPLAY_TIME = 0.80055  # 800.55 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
-TRIAL_N = 75 * 1 # 75 trials = 1 minute
-EEG_DURATION = 25 + 60 * 1 # 15 seconds of buffer + n minutes
+TRIAL_N = 75 * 10 # 75 trials = 1 minute
+EEG_DURATION = 35 + 60 * 10 # 35 seconds of buffer + n minutes
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -49,7 +49,7 @@ eeg = EEG(device=board_name, mac_addr=mac_addr)
 
 # Create save file name
 subject_id = 1  # or any identifier for the subject
-session_nb = 1  # session number
+session_nb = 2  # session number
 save_fn = generate_save_fn(board_name, "GradCPT", subject_id, session_nb)
 
 # Start device
@@ -58,7 +58,7 @@ eeg.start(save_fn, EEG_DURATION)
 def show_intructions():
     instruction_clock = core.Clock()
     instruction_text = '\nWelcome to the GradCPT experiment!\nStay still, focus on the centre of the screen, and try not to blink. \n The experiment will start in 20 seconds'
-
+    win.setMouseVisible(False)
     text = visual.TextStim(win=win, text=instruction_text, color=[-1, -1, -1])
     text.draw()
     win.flip()
@@ -198,7 +198,12 @@ def save_results(labels: List[Tuple[float, int, bool]]):
     headers = ("start_timestamp", 'in_the_zone', 'is_mountain')
 
     # Define the filename
-    filename = "gradcpt_output.csv"
+    subject_str = f"subject{subject_id:04}"
+    session_str = f"session{session_nb:03}"
+    filename = f"/home/henri/eeg/data/GradCPT/local/{board_name}/{subject_str}/{session_str}/gradcpt/gradcpt_%s" % strftime("%Y-%m-%d-%H.%M.%S", gmtime()) + ".csv"
+
+    directory = os.path.dirname(filename)
+    os.makedirs(directory, exist_ok=True)
 
     # Open the file in write mode and write the data
     with open(filename, 'w', newline='') as file:

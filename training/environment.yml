@@ -14,5 +14,4 @@ dependencies:
   - matplotlib
   - sktime # for rocket
   - pyts # for rocket
-  - pip:
-    - git+https://github.com/gon-uri/detach_rocket#egg=detach_rocket # for rocket
+  - numba # for rocket
