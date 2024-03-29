@@ -1,8 +1,19 @@
 from os import path, makedirs
 from time import strftime, gmtime
+from typing import TypedDict, List, Tuple
 from pathlib import Path
+import json
+import csv
+
 
 DATA_DIR = path.join(path.expanduser("~/"), "eeg", "data")
+
+# Types
+class Trial(TypedDict):
+    """List entry for the `trials` List."""
+    is_mountain: bool
+    responses: List[float] 
+    start_timestamp: float
 
 def get_recording_dir(
     board_name: str,
@@ -39,7 +50,7 @@ def _get_recording_dir(
 
     return recording_dir
 
-def generate_save_fn(
+def eeg_save_fn(
     board_name: str,
     experiment: str,
     subject_id: int,
@@ -55,3 +66,34 @@ def generate_save_fn(
     return recording_dir / (
         "recording_%s" % strftime("%Y-%m-%d-%H.%M.%S", gmtime()) + ".csv"
     )
+
+def save_final_results(board_name: str, subject_id: int, session_nb:int, labels: List[Tuple[float, int, bool]]):
+    headers = ("start_timestamp", 'in_the_zone', 'is_mountain')
+
+    # Define the filename
+    subject_str = f"subject{subject_id:04}"
+    session_str = f"session{session_nb:03}"
+    filename = f"/home/henri/eeg/data/GradCPT/local/{board_name}/{subject_str}/{session_str}/gradcpt/gradcpt_%s" % strftime("%Y-%m-%d-%H.%M.%S", gmtime()) + ".csv"
+
+    directory = path.dirname(filename)
+    makedirs(directory, exist_ok=True)
+
+    # Open the file in write mode and write the data
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerows([headers] + labels)
+    
+def save_raw_responses(board_name: str, subject_id: int, session_nb:int, responses: List[Trial]):
+    trials_json = json.dumps(responses, indent=4)
+
+    # Define the filename
+    subject_str = f"subject{subject_id:04}"
+    session_str = f"session{session_nb:03}"
+    filename = f"/home/henri/eeg/data/GradCPT/local/{board_name}/{subject_str}/{session_str}/gradcpt/raw_%s" % strftime("%Y-%m-%d-%H.%M.%S", gmtime()) + ".json"
+
+    directory = path.dirname(filename)
+    makedirs(directory, exist_ok=True)
+
+    # Open the file in write mode and write the data
+    with open(filename, "w") as file:
+        file.write(trials_json)

@@ -1,14 +1,13 @@
-from typing import TypedDict, Optional, Tuple, List
+from typing import Optional, Tuple, List
 from time import perf_counter, time, strftime, gmtime
 from psychopy import visual, core, event
 from scipy.ndimage import gaussian_filter1d
 from pylsl import StreamInfo, StreamOutlet
 from eeg import EEG
-from utils import generate_save_fn
+from utils import eeg_save_fn, save_final_results, save_raw_responses, Trial
 import numpy as np
 import random
 import os
-import csv
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
@@ -18,13 +17,6 @@ TRIAL_N = 75 * 10 # 75 trials = 1 minute
 EEG_DURATION = 35 + 60 * 10 # 35 seconds of buffer + n minutes
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
-
-# Types
-class Trial(TypedDict):
-    """List entry for the `trials` List."""
-    is_mountain: bool
-    responses: List[float] 
-    start_timestamp: float
 
 # Paths to images
 city_images = [f'images/city/city_{i}.jpg' for i in range(10)]
@@ -49,8 +41,8 @@ eeg = EEG(device=board_name, mac_addr=mac_addr)
 
 # Create save file name
 subject_id = 1  # or any identifier for the subject
-session_nb = 2  # session number
-save_fn = generate_save_fn(board_name, "GradCPT", subject_id, session_nb)
+session_nb = 0  # session number
+save_fn = eeg_save_fn(board_name, "GradCPT", subject_id, session_nb)
 
 # Start device
 eeg.start(save_fn, EEG_DURATION)
@@ -108,7 +100,7 @@ def get_image(last_image:visual.ImageStim = None) -> Tuple[visual.ImageStim, boo
 
     return choice, is_mountain
 
-def record_responses() -> Tuple[float, float, List[Trial]]:
+def record_responses() -> List[Trial]:
     trials = []
     
     last_image, _ = get_image()
@@ -194,28 +186,15 @@ def label(response_times: List[Optional[float]], start_timestamps: List[float], 
 
     return zone_labels
 
-def save_results(labels: List[Tuple[float, int, bool]]):
-    headers = ("start_timestamp", 'in_the_zone', 'is_mountain')
 
-    # Define the filename
-    subject_str = f"subject{subject_id:04}"
-    session_str = f"session{session_nb:03}"
-    filename = f"/home/henri/eeg/data/GradCPT/local/{board_name}/{subject_str}/{session_str}/gradcpt/gradcpt_%s" % strftime("%Y-%m-%d-%H.%M.%S", gmtime()) + ".csv"
-
-    directory = os.path.dirname(filename)
-    os.makedirs(directory, exist_ok=True)
-
-    # Open the file in write mode and write the data
-    with open(filename, 'w', newline='') as file:
-        writer = csv.writer(file)
-        writer.writerows([headers] + labels)
 
 if __name__ == "__main__":
     show_intructions()
     raw_responses = record_responses()
+    save_raw_responses(board_name, subject_id, session_nb, raw_responses)
     responses, start_timestamps, is_mountains = process_responses(raw_responses)
     labels = label(responses, start_timestamps, is_mountains)
-    save_results(labels)
+    save_final_results(board_name, subject_id, session_nb, labels)
     
 # Close the window
 eeg.stop()
