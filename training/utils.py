@@ -4,6 +4,7 @@ import pandas as pd
 from scipy.stats import entropy, skew, ttest_ind
 from scipy.ndimage import binary_closing, binary_opening
 from scipy.signal import filtfilt, butter, welch
+from sklearn.preprocessing import StandardScaler
 
 def synchronize_trials(eeg_df, gradcpt_df):
     gradcpt_df = gradcpt_df[3:].reset_index(drop=True) # drop first 2 trials because they can be unstable
@@ -248,22 +249,26 @@ def train(runs, num_features, df):
             top_features_indices = select_top_features(X_train, y_train)
             X_train_selected = X_train[:, top_features_indices]
             X_test_selected = X_test[:, top_features_indices]
+            
+            # Initialize the scaler
+            scaler = StandardScaler()
+            X_train_scaled = scaler.fit_transform(X_train_selected)
+            X_test_scaled = scaler.transform(X_test_selected)
         
-            # Inner CV for hyperparameter truning
+            # Inner CV for hyperparameter tuning
             inner_cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-            param_grid = {'C': [0.1, 1, 10], 'gamma': ['scale', 'auto'], 'kernel': ['rbf']}
+            param_grid = {'C': [0.1, 0.5, 1], 'gamma': ['scale', 'auto'], 'kernel': ['rbf']}
             grid_search = GridSearchCV(SVC(), param_grid, cv=inner_cv, scoring='balanced_accuracy')
-            grid_search.fit(X_train_selected, y_train)
+            grid_search.fit(X_train_scaled, y_train)
         
             best_model = grid_search.best_estimator_
             
-        
-            balanced_acc = balanced_accuracy_score(y_test, best_model.predict(X_test_selected))
+            balanced_acc = balanced_accuracy_score(y_test, best_model.predict(X_test_scaled))
             balanced_acc_scores.append(balanced_acc)
         
         final_performance = np.mean(balanced_acc_scores)
         results.append(round(final_performance, 3))
-  #  print(f'Runs: {results}')
+    
     print(f'Avg: {round((sum(results) / len(results)) * 100, 3)}%')
 
 # FEATURES

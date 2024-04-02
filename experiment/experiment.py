@@ -15,6 +15,8 @@ IMAGE_DISPLAY_TIME = 0.80055  # 800.55 ms (because 256 Hz of the EEG does not al
 TARGET_FREQ = 0.9
 TRIAL_N = 75 * 10 # 75 trials = 1 minute
 EEG_DURATION = 35 + 60 * 10 # 35 seconds of buffer + n minutes
+# TRIAL_N = 15
+# EEG_DURATION = 45
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -40,8 +42,8 @@ mac_addr = "00:55:DA:B5:AB:4C"
 eeg = EEG(device=board_name, mac_addr=mac_addr)
 
 # Create save file name
-subject_id = 1  # or any identifier for the subject
-session_nb = 0  # session number
+subject_id = 3  # or any identifier for the subject
+session_nb = 1  # session number
 save_fn = eeg_save_fn(board_name, "GradCPT", subject_id, session_nb)
 
 # Start device
