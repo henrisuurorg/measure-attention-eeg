@@ -86,18 +86,6 @@ def bandpass(column, lowcut=0.5, highcut=50.0, fs=256, order=5):
     b, a = butter(order, [low, high], btype="band")
     return filtfilt(b, a, column)
 
-def time_diff(eeg_df, gradcpt_df):
-    segment_samples = 205
-
-    num_segments = len(gradcpt_df['in_the_zone'])
-    diffs = []
-    for i in range(num_segments):
-        eeg_i = i*segment_samples
-        diff = (eeg_df['timestamps'][eeg_i] - gradcpt_df['start_timestamp'][i]) * 1000 # ms
-        diffs.append(diff)
-    
-    return diffs
-
 def segment_column(column, gradcpt_df):
 # 256*0.8=204.8 ||| 204*(1/256)=0,7969 and 205*(1/256)=0,8008
 # 205 is closer to 800 and gradcpt usually takes a fraction of ms longer than 800ms
@@ -257,7 +245,7 @@ def train(runs, num_features, df):
         
             # Inner CV for hyperparameter tuning
             inner_cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
-            param_grid = {'C': [0.1, 0.5, 1], 'gamma': ['scale', 'auto'], 'kernel': ['rbf']}
+            param_grid = {'C': [0.1, 0.5, 1], 'gamma': ['scale'], 'kernel': ['rbf']}
             grid_search = GridSearchCV(SVC(), param_grid, cv=inner_cv, scoring='balanced_accuracy')
             grid_search.fit(X_train_scaled, y_train)
         
