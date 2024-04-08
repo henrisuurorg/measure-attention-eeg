@@ -5,6 +5,10 @@ from scipy.stats import entropy, skew, ttest_ind
 from scipy.ndimage import binary_closing, binary_opening
 from scipy.signal import filtfilt, butter, welch
 from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+from detach_rocket.detach_rocket.detach_classes import DetachMatrix
+import matplotlib.pyplot as plt
+
 
 def synchronize_trials(eeg_df, gradcpt_df):
     gradcpt_df = gradcpt_df[3:].reset_index(drop=True) # drop first 2 trials because they can be unstable
@@ -175,6 +179,52 @@ def extract_features(channel, segments):
     features_df.fillna(0, inplace=True)
 
     return features_df
+
+def SFD(X, y, p=0.1):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15)
+    detach_matrix = DetachMatrix(trade_off=p)
+    detach_matrix.fit(X_train, y_train)
+
+    # Evaluate Performance on Test Set
+    detach_test_score, full_test_score= detach_matrix.score(X_test, y_test)
+    print('Test Accuraccy Full Model: {:.2f}%'.format(100*full_test_score))
+    print('Test Accuraccy Detach Model: {:.2f}%'.format(100*detach_test_score))
+
+    percentage_vector = detach_matrix._percentage_vector
+    acc_curve = detach_matrix._sfd_curve
+
+    c = detach_matrix.trade_off
+
+    x_sfd=(percentage_vector) * 100
+    y_sfd=(acc_curve/acc_curve[0]-1) * 100
+
+    point_x = x_sfd[detach_matrix._max_index]
+    #point_y = y[DetachMatrixModel._max_index]
+
+    plt.figure(figsize=(8,3.5))
+    plt.axvline(x = point_x, color = 'r',label=f'Optimal Model (c={c})')
+    plt.plot(x_sfd, y_sfd, label='SFD curve', linewidth=2.5, color='C7', alpha=1)
+    #plt.scatter(point_x, point_y, s=50, marker='o', label=f'Optimal point (c={c})')
+
+    plt.grid(True, linestyle='-', alpha=0.5)
+    plt.xlim(102,-2)
+    plt.xlabel('% of Retained Features')
+    plt.ylabel('Relative Validation Set Accuracy (%)')
+    plt.legend()
+    plt.show()
+
+    print('Optimal Model Size: {:.2f}% of full model'.format(point_x))
+
+    feature_mask = detach_matrix._feature_mask
+    
+    selected_features_df = X.loc[:, feature_mask]
+    selected_features_df = selected_features_df.assign(Label=y)
+
+    print(f'Number of features kept: {len(selected_features_df)-1}')
+
+    return selected_features_df
+
+
 
 def top_bot_25(feature_df):
         t_values = []
