@@ -220,11 +220,9 @@ def SFD(X, y, p=0.1):
     selected_features_df = X.loc[:, feature_mask]
     selected_features_df = selected_features_df.assign(Label=y)
 
-    print(f'Number of features kept: {len(selected_features_df)-1}')
+    print(f'Number of features kept: {len(selected_features_df.columns)-1}')
 
     return selected_features_df
-
-
 
 def top_bot_25(feature_df):
         t_values = []
@@ -307,7 +305,9 @@ def train(runs, num_features, df):
         final_performance = np.mean(balanced_acc_scores)
         results.append(round(final_performance, 3))
     
-    print(f'Avg: {round((sum(results) / len(results)) * 100, 3)}%')
+    all_runs_avg_acc = round((sum(results) / len(results)) * 100, 3)
+    
+    return all_runs_avg_acc
 
 # FEATURES
 def approximate_entropy(signal, m=2, r=None):
