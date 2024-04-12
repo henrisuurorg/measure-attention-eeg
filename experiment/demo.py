@@ -11,10 +11,10 @@ import os
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
-IMAGE_DISPLAY_TIME = 0.80065  # 800.55 ms (because 256 Hz of the EEG does not allow for 800ms windows)
+IMAGE_DISPLAY_TIME = 0.80065  # 800.65 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
-TRIAL_N = 75 * 10 # 75 trials = 1 minute
-EEG_DURATION = 35 + 60 * 10 # 35 seconds of buffer + n minutes
+TRIAL_N = 25
+EEG_DURATION = 35 + 60 * 30
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
@@ -40,7 +40,7 @@ mac_addr = "00:55:DA:B5:AB:4C"
 eeg = EEG(device=board_name, mac_addr=mac_addr)
 
 # Create save file name
-subject_id = 10  # or any identifier for the subject
+subject_id = 0  # or any identifier for the subject
 session_nb = 1  # session number
 save_fn = eeg_save_fn(board_name, "GradCPT", subject_id, session_nb)
 

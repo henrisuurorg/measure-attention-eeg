@@ -6,7 +6,8 @@ from scipy.ndimage import binary_closing, binary_opening
 from scipy.signal import filtfilt, butter, welch
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
-from detach_rocket.detach_rocket.detach_classes import DetachMatrix
+from sklearn.linear_model import (RidgeClassifierCV,RidgeClassifier)
+from detach_rocket.detach_rocket.detach_classes import DetachMatrix, DetachRocket
 import matplotlib.pyplot as plt
 
 
@@ -180,7 +181,7 @@ def extract_features(channel, segments):
 
     return features_df
 
-def SFD(X, y, p=0.1):
+def SFD(X, y, p=0.1, graphic=True):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15)
     detach_matrix = DetachMatrix(trade_off=p)
     detach_matrix.fit(X_train, y_train)
@@ -189,29 +190,26 @@ def SFD(X, y, p=0.1):
     detach_test_score, full_test_score= detach_matrix.score(X_test, y_test)
     print('Test Accuraccy Full Model: {:.2f}%'.format(100*full_test_score))
     print('Test Accuraccy Detach Model: {:.2f}%'.format(100*detach_test_score))
-
+    
     percentage_vector = detach_matrix._percentage_vector
-    acc_curve = detach_matrix._sfd_curve
-
-    c = detach_matrix.trade_off
-
     x_sfd=(percentage_vector) * 100
-    y_sfd=(acc_curve/acc_curve[0]-1) * 100
-
     point_x = x_sfd[detach_matrix._max_index]
-    #point_y = y[DetachMatrixModel._max_index]
 
-    plt.figure(figsize=(8,3.5))
-    plt.axvline(x = point_x, color = 'r',label=f'Optimal Model (c={c})')
-    plt.plot(x_sfd, y_sfd, label='SFD curve', linewidth=2.5, color='C7', alpha=1)
-    #plt.scatter(point_x, point_y, s=50, marker='o', label=f'Optimal point (c={c})')
+    if graphic: 
+        acc_curve = detach_matrix._sfd_curve
+        c = detach_matrix.trade_off
+        y_sfd=(acc_curve/acc_curve[0]-1) * 100
 
-    plt.grid(True, linestyle='-', alpha=0.5)
-    plt.xlim(102,-2)
-    plt.xlabel('% of Retained Features')
-    plt.ylabel('Relative Validation Set Accuracy (%)')
-    plt.legend()
-    plt.show()
+        plt.figure(figsize=(8,3.5))
+        plt.axvline(x = point_x, color = 'r',label=f'Optimal Model (c={c})')
+        plt.plot(x_sfd, y_sfd, label='SFD curve', linewidth=2.5, color='C7', alpha=1)
+
+        plt.grid(True, linestyle='-', alpha=0.5)
+        plt.xlim(102,-2)
+        plt.xlabel('% of Retained Features')
+        plt.ylabel('Relative Validation Set Accuracy (%)')
+        plt.legend()
+        plt.show()
 
     print('Optimal Model Size: {:.2f}% of full model'.format(point_x))
 
@@ -224,35 +222,83 @@ def SFD(X, y, p=0.1):
 
     return selected_features_df
 
+def fit_rocket(X_train, X_test, y_train, y_test, trade_off=0.1, graphic=True, model_type='minirocket', num_kernels=10000):
+    model = DetachRocket(model_type, num_kernels, trade_off)
+    model.fit(X_train, y_train)
+
+    #Evaluate Performance on Test Set
+    detach_test_score, full_test_score= model.score(X_test,y_test)
+    print('Test Accuraccy Full Model: {:.2f}%'.format(100*full_test_score))
+    print('Test Accuraccy Detach-ROCKET: {:.2f}%'.format(100*detach_test_score))
+
+    percentage_vector = model._percentage_vector
+    x=(percentage_vector) * 100
+    point_x = x[model._max_index]
+
+    if graphic:
+        c = model.trade_off
+        acc_curve = model._sfd_curve
+        y_plt=(acc_curve/acc_curve[0]-1) * 100
+        plt.figure(figsize=(8,3.5))
+        plt.axvline(x = point_x, color = 'r',label=f'Optimal Model (c={c})')
+        plt.plot(x, y_plt, label='SFD curve', linewidth=2.5, color='C7', alpha=1)
+        plt.grid(True, linestyle='-', alpha=0.5)
+        plt.xlim(102,-2)
+        plt.xlabel('% of Retained Features')
+        plt.ylabel('Relative Validation Set Accuracy (%)')
+        plt.legend()
+        plt.show()
+    
+    print('-------------------------')
+    print('Optimal Model Size: {:.2f}% of full model'.format(point_x))
+
+    return model
+
+def fit_classifier(X_train, X_test, y_train, y_test):
+    # CV to find best alpha
+    cv_classifier = RidgeClassifierCV(alphas=np.logspace(-10, 10, 20))
+    cv_classifier.fit(X_train, y_train)
+    model_alpha = cv_classifier.alpha_
+
+    # Refit with all training set
+    optimal_classifier = RidgeClassifier(alpha=model_alpha)
+    optimal_classifier.fit(X_train, y_train)
+    optimal_acc_train = optimal_classifier.score(X_train, y_train)
+
+    print('training acc: ', optimal_acc_train)
+    print('testing acc: ', optimal_classifier.score(X_test, y_test))
+
+    return optimal_classifier
+
 def top_bot_25(feature_df):
-        t_values = []
-        feature_names = []
+    t_values = []
+    feature_names = []
 
-        # Perform t-test for each feature against 'in_the_zone'
-        for column in feature_df.columns[:-1]:  # Exclude the last column ('in_the_zone')
-            t_stat, p_val = ttest_ind(feature_df[column], feature_df['in_the_zone'], nan_policy='omit')
-            t_values.append(t_stat)
-            feature_names.append(column)
+    # Perform t-test for each feature against 'in_the_zone'
+    for column in feature_df.columns[:-1]:  # Exclude the last column ('in_the_zone')
+        t_stat, p_val = ttest_ind(feature_df[column], feature_df['in_the_zone'], nan_policy='omit')
+        t_values.append(t_stat)
+        feature_names.append(column)
 
-        # Create a DataFrame to store features and their corresponding t-values
-        t_values_df = pd.DataFrame({'Feature': feature_names, 'T-value': t_values})
+    # Create a DataFrame to store features and their corresponding t-values
+    t_values_df = pd.DataFrame({'Feature': feature_names, 'T-value': t_values})
 
-        # Sort the DataFrame by the absolute t-values
-        t_values_df['Abs T-value'] = t_values_df['T-value'].abs()
-        t_values_df_sorted = t_values_df.sort_values(by='Abs T-value', ascending=False)
+    # Sort the DataFrame by the absolute t-values
+    t_values_df['Abs T-value'] = t_values_df['T-value'].abs()
+    t_values_df_sorted = t_values_df.sort_values(by='Abs T-value', ascending=False)
 
-        # Select the 25 most important features
-        top_25_features = t_values_df_sorted.head(25)
+    # Select the 25 most important features
+    top_25_features = t_values_df_sorted.head(25)
 
-        # Select the 25 least important features
-        bottom_25_features = t_values_df_sorted.tail(25)
+    # Select the 25 least important features
+    bottom_25_features = t_values_df_sorted.tail(25)
 
-        # You can now print or further analyze these subsets
-        print("Top 25 Most Important Features:")
-        print(top_25_features)
+    # You can now print or further analyze these subsets
+    print("Top 25 Most Important Features:")
+    print(top_25_features)
 
-        print("\nBottom 25 Least Important Features:")
-        print(bottom_25_features)
+    print("\nBottom 25 Least Important Features:")
+    print(bottom_25_features)
 
 def train(runs, num_features, df):
     results = []
