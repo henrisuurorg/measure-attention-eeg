@@ -256,6 +256,8 @@ def fit_rocket(X_train, X_test, y_train, y_test, trade_off=0.1, graphic=True, mo
 
 def fit_classifier(X_train, X_test, y_train, y_test):
     # CV to find best alpha
+    from sklearn.metrics import classification_report, confusion_matrix
+
     cv_classifier = RidgeClassifierCV(alphas=np.logspace(-10, 10, 20))
     cv_classifier.fit(X_train, y_train)
     model_alpha = cv_classifier.alpha_
@@ -263,12 +265,24 @@ def fit_classifier(X_train, X_test, y_train, y_test):
     # Refit with all training set
     optimal_classifier = RidgeClassifier(alpha=model_alpha)
     optimal_classifier.fit(X_train, y_train)
-    optimal_acc_train = optimal_classifier.score(X_train, y_train)
 
-    print('training acc: ', optimal_acc_train)
-    print('testing acc: ', optimal_classifier.score(X_test, y_test))
+    # Predictions
+    y_pred = optimal_classifier.predict(X_test)
+    y_train_pred = optimal_classifier.predict(X_train)
+
+    # Metrics
+    optimal_acc_train = optimal_classifier.score(X_train, y_train)
+    optimal_acc_test = optimal_classifier.score(X_test, y_test)
+
+    print('Training Accuracy:')
+    print(optimal_acc_train)
+    print('Testing Accuracy:')
+    print(optimal_acc_test)
+    print('\nClassification Report (Test):\n', classification_report(y_test, y_pred))
+    print('\nConfusion Matrix (Test):\n', confusion_matrix(y_test, y_pred))
 
     return optimal_classifier
+
 
 def top_bot_25(feature_df):
     t_values = []

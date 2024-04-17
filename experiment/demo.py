@@ -13,8 +13,8 @@ import os
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
 IMAGE_DISPLAY_TIME = 0.80065  # 800.65 ms (because 256 Hz of the EEG does not allow for 800ms windows)
 TARGET_FREQ = 0.9
-TRIAL_N = 25
-EEG_DURATION = 35 + 60 * 30
+TRIAL_N = 45
+EEG_DURATION = 35 + 60 
 FWHM = 9
 SIGMA = FWHM / (2 * np.sqrt(2 * np.log(2)))
 
