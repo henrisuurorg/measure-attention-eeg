@@ -5,10 +5,13 @@ from scipy.stats import entropy, skew, ttest_ind
 from scipy.ndimage import binary_closing, binary_opening
 from scipy.signal import filtfilt, butter, welch
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
+from sklearn.metrics import balanced_accuracy_score, f1_score
+from sklearn.model_selection import train_test_split,  StratifiedKFold, GridSearchCV
 from sklearn.linear_model import (RidgeClassifierCV,RidgeClassifier)
+from sklearn.svm import SVC
 from detach_rocket.detach_rocket.detach_classes import DetachMatrix, DetachRocket
 import matplotlib.pyplot as plt
+
 
 
 def synchronize_trials(eeg_df, gradcpt_df):
@@ -98,7 +101,6 @@ def segment_column(column, gradcpt_df):
     
     num_segments = len(gradcpt_df['in_the_zone'])
     segments = []
-    timestamps = []
     for i in range(num_segments):
         start = i * segment_samples
         end = start + segment_samples
@@ -149,17 +151,17 @@ def extract_features(channel, segments):
             segment_features[f'{channel}_{band}_energy'] = energy(signal)
             segment_features[f'{channel}_{band}_skewness'] = skewness(signal)
             
-            # New features
-            _, psd = power_spectral_density(signal)
-            segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
-            segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
-            segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
+            # # New features
+            # _, psd = power_spectral_density(signal)
+            # segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
+            # segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
+            # segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
             
-            # Hjorth parameters (as separate features)
-            activity, mobility, complexity = hjorth_parameters(signal)
-            segment_features[f'{channel}_{band}_hjorth_activity'] = activity
-            segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
-            segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
+            # # Hjorth parameters (as separate features)
+            # activity, mobility, complexity = hjorth_parameters(signal)
+            # segment_features[f'{channel}_{band}_hjorth_activity'] = activity
+            # segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
+            # segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
         features_data.append(segment_features)
     
     # Now, for each segment, append features from preceding 9 windows
@@ -314,44 +316,38 @@ def top_bot_25(feature_df):
     print("\nBottom 25 Least Important Features:")
     print(bottom_25_features)
 
+
 def train(runs, num_features, df):
-    results = []
-    
+    best_run_balanced_acc = 0
+    best_run_metrics = {}
+
     for _ in range(runs):
-        from scipy.stats import ttest_ind
-        from sklearn.model_selection import StratifiedKFold, GridSearchCV
-        from sklearn.metrics import balanced_accuracy_score
-        from sklearn.svm import SVC
-        
         features = df.iloc[:, :-1].values
         labels = df.iloc[:, -1].values
         
         def select_top_features(X, y, num_features=num_features):
-            # Perform a t-test across features
-            t_stats, p_values = ttest_ind(X[y == 0], X[y == 1], axis=0)
-            # Select indices of top features based on smallest p-values
-            top_features_indices = np.argsort(np.abs(t_stats))[-num_features:]
+            _, p_values = ttest_ind(X[y == 0], X[y == 1], axis=0)
+            top_features_indices = np.argsort(p_values)[:num_features]
             return top_features_indices
         
         outer_cv = StratifiedKFold(n_splits=10, shuffle=True)
         
-        balanced_acc_scores = []
+        run_balanced_acc_scores = []
+        run_f1_scores = []
+        run_training_acc_scores = []
         
         for train_index, test_index in outer_cv.split(features, labels):
             X_train, X_test = features[train_index], features[test_index]
             y_train, y_test = labels[train_index], labels[test_index]
         
-            # Feature selection for the outer fold
             top_features_indices = select_top_features(X_train, y_train)
             X_train_selected = X_train[:, top_features_indices]
             X_test_selected = X_test[:, top_features_indices]
             
-            # Initialize the scaler
             scaler = StandardScaler()
             X_train_scaled = scaler.fit_transform(X_train_selected)
             X_test_scaled = scaler.transform(X_test_selected)
         
-            # Inner CV for hyperparameter tuning
             inner_cv = StratifiedKFold(n_splits=10, shuffle=True, random_state=42)
             param_grid = {'C': [0.1, 0.5, 1], 'gamma': ['scale'], 'kernel': ['rbf']}
             grid_search = GridSearchCV(SVC(), param_grid, cv=inner_cv, scoring='balanced_accuracy')
@@ -359,15 +355,27 @@ def train(runs, num_features, df):
         
             best_model = grid_search.best_estimator_
             
-            balanced_acc = balanced_accuracy_score(y_test, best_model.predict(X_test_scaled))
-            balanced_acc_scores.append(balanced_acc)
+            # Metrics calculation
+            y_train_pred = best_model.predict(X_train_scaled)
+            y_pred = best_model.predict(X_test_scaled)
+            balanced_acc = balanced_accuracy_score(y_test, y_pred)
+            f1 = f1_score(y_test, y_pred, average='binary')
+            training_acc = balanced_accuracy_score(y_train, y_train_pred)
+            
+            run_balanced_acc_scores.append(balanced_acc)
+            run_f1_scores.append(f1)
+            run_training_acc_scores.append(training_acc)
         
-        final_performance = np.mean(balanced_acc_scores)
-        results.append(round(final_performance, 3))
+        run_avg_balanced_acc = np.mean(run_balanced_acc_scores)
+        if run_avg_balanced_acc > best_run_balanced_acc:
+            best_run_balanced_acc = run_avg_balanced_acc
+            best_run_metrics = {
+                'train_acc': np.mean(run_training_acc_scores),
+                'test_acc': run_avg_balanced_acc,
+                'f1_score': np.mean(run_f1_scores),
+            }
     
-    all_runs_avg_acc = round((sum(results) / len(results)) * 100, 3)
-    
-    return all_runs_avg_acc
+    return best_run_metrics
 
 # FEATURES
 def approximate_entropy(signal, m=2, r=None):

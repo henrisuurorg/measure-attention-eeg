@@ -1,5 +1,5 @@
 from typing import Optional, Tuple, List
-from time import perf_counter, time, strftime, gmtime
+from time import time
 from psychopy import visual, core, event
 from scipy.ndimage import gaussian_filter1d
 from pylsl import StreamInfo, StreamOutlet
@@ -7,7 +7,6 @@ from eeg import EEG
 from utils import eeg_save_fn, save_final_results, save_raw_responses, Trial
 import numpy as np
 import random
-import os
 
 # constants
 SCREEN_WIDTH, SCREEN_HEIGHT = 1920, 1080
@@ -104,7 +103,7 @@ def record_responses() -> List[Trial]:
     trials = []
     
     last_image, _ = get_image()
-    for i in range(TRIAL_N):
+    for _ in range(TRIAL_N):
         trial_clock = core.Clock()
         start_time = time()
         next_image, is_mountain = get_image(last_image)

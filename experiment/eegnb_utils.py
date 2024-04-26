@@ -1,6 +1,4 @@
 import numpy as np
-import socket
-import platform
 import serial
 
 from brainflow.board_shim import BoardShim, BoardIds

@@ -12,6 +12,7 @@ dependencies:
   - pip
   - scikit-learn
   - matplotlib
+  - seaborn
   - sktime # for rocket
   - pyts # for rocket
   - numba # for rocket
