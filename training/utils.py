@@ -133,7 +133,7 @@ def decompose_segment(segment, wavelet='sym3', max_level=5):
     return bands
 
 # Features defined below
-def extract_features(channel, segments):
+def extract_features(channel, segments, extra_feats=False):
     # Define bands and features for clarity and extensibility
     bands = ['delta', 'theta', 'alpha', 'beta', 'gamma']
     
@@ -151,17 +151,20 @@ def extract_features(channel, segments):
             segment_features[f'{channel}_{band}_energy'] = energy(signal)
             segment_features[f'{channel}_{band}_skewness'] = skewness(signal)
             
-            # # New features
-            # _, psd = power_spectral_density(signal)
-            # segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
-            # segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
-            # segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
-            
-            # # Hjorth parameters (as separate features)
-            # activity, mobility, complexity = hjorth_parameters(signal)
-            # segment_features[f'{channel}_{band}_hjorth_activity'] = activity
-            # segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
-            # segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
+            # New features
+            if extra_feats:
+                _, psd = power_spectral_density(signal)
+                segment_features[f'{channel}_{band}_psd_mean'] = np.mean(psd)
+                segment_features[f'{channel}_{band}_spectral_entropy'] = spectral_entropy(signal)
+                segment_features[f'{channel}_{band}_sef'] = spectral_edge_frequency(signal)
+                segment_features[f'{channel}_{band}_dfa'] = detrended_fluctuation_analysis(signal)   
+
+                
+                # Hjorth parameters (as separate features)
+                activity, mobility, complexity = hjorth_parameters(signal)
+                segment_features[f'{channel}_{band}_hjorth_activity'] = activity
+                segment_features[f'{channel}_{band}_hjorth_mobility'] = mobility
+                segment_features[f'{channel}_{band}_hjorth_complexity'] = complexity    
         features_data.append(segment_features)
     
     # Now, for each segment, append features from preceding 9 windows
@@ -421,7 +424,8 @@ def skewness(signal):
     return skew(signal)
 
 def power_spectral_density(signal, fs=256):
-    f, Pxx = welch(signal, fs=fs)
+    nperseg = min(len(signal), 256)
+    f, Pxx = welch(signal, fs=fs, nperseg=nperseg)
     return f, Pxx
 
 def spectral_entropy(signal, fs=256, method='fft', normalize=False):
@@ -440,7 +444,8 @@ def spectral_entropy(signal, fs=256, method='fft', normalize=False):
     return se
 
 def spectral_edge_frequency(signal, fs=256, edge=0.9):
-    f, Pxx = welch(signal, fs=fs)
+    nperseg = min(len(signal), 256)
+    f, Pxx = welch(signal, fs=fs, nperseg=nperseg)
     cumulative_power = np.cumsum(Pxx)
     total_power = cumulative_power[-1]
     edge_freq = f[np.where(cumulative_power >= total_power * edge)[0][0]]
@@ -456,3 +461,45 @@ def hjorth_parameters(signal):
     complexity = mobility_derivative / mobility
     
     return activity, mobility, complexity
+
+def detrended_fluctuation_analysis(signal, min_scale=10, max_scale=None, scale_step=20, degree=1):
+    integrated_signal = np.cumsum(signal - np.mean(signal))
+    N = len(integrated_signal)
+
+    if N == 0:
+        raise ValueError("Signal length is zero after preprocessing.")
+    
+    if max_scale is None or max_scale > N:
+        max_scale = N // 2  # Set the maximum scale to half the length of the signal
+    
+    scales = np.arange(min_scale, max_scale, scale_step)
+
+    rms_fluctuations = []
+
+    for scale in scales:
+        n_segments = N // scale
+        if n_segments == 0:
+            continue  # Avoid processing if no segments would result
+
+        flucts = np.zeros(n_segments)
+
+        for i in range(n_segments):
+            segment = integrated_signal[i*scale:(i+1)*scale]
+
+            x = np.arange(len(segment))
+            coeffs = np.polyfit(x, segment, deg=degree)
+            trend = np.polyval(coeffs, x)
+            detrended_segment = segment - trend
+
+            flucts[i] = np.sqrt(np.mean(detrended_segment**2))
+
+        rms_fluctuations.append(np.mean(flucts))
+
+    if not rms_fluctuations:
+        return np.nan  # Return NaN if no valid scales were processed
+
+    log_scales = np.log(scales)
+    log_fluctuations = np.log(rms_fluctuations)
+    slope, intercept = np.polyfit(log_scales, log_fluctuations, 1)
+
+    return slope

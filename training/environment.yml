@@ -16,3 +16,6 @@ dependencies:
   - sktime # for rocket
   - pyts # for rocket
   - numba # for rocket
+  - statsmodels
+  - pip: 
+    - nolds
