@@ -1,0 +1,5652 @@
+[
+    {
+        "is_mountain": false,
+        "responses": [
+            591.170072555542
+        ],
+        "start_timestamp": 1712219373.7015803
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            157.61899948120117,
+            742.790937423706
+        ],
+        "start_timestamp": 1712219374.502312
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            392.5161361694336
+        ],
+        "start_timestamp": 1712219375.302981
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            43.12300682067871
+        ],
+        "start_timestamp": 1712219376.1036441
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            329.9269676208496
+        ],
+        "start_timestamp": 1712219376.904313
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            45.021772384643555,
+            528.7139415740967
+        ],
+        "start_timestamp": 1712219377.704977
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            312.72101402282715
+        ],
+        "start_timestamp": 1712219378.5056417
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            196.78187370300293
+        ],
+        "start_timestamp": 1712219379.3062994
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            164.3979549407959
+        ],
+        "start_timestamp": 1712219380.1069682
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            265.29407501220703
+        ],
+        "start_timestamp": 1712219380.907642
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            382.86805152893066
+        ],
+        "start_timestamp": 1712219381.7083304
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            16.44301414489746
+        ],
+        "start_timestamp": 1712219382.5090024
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            17.589092254638672,
+            434.88097190856934
+        ],
+        "start_timestamp": 1712219383.3096774
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            485.7800006866455
+        ],
+        "start_timestamp": 1712219384.1103466
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            704.1831016540527
+        ],
+        "start_timestamp": 1712219384.9110155
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            455.17611503601074
+        ],
+        "start_timestamp": 1712219385.7116861
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219386.512345
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            473.2241630554199
+        ],
+        "start_timestamp": 1712219387.313013
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            142.5459384918213,
+            657.7339172363281
+        ],
+        "start_timestamp": 1712219388.1136727
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            591.8540954589844
+        ],
+        "start_timestamp": 1712219388.914343
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            459.03611183166504
+        ],
+        "start_timestamp": 1712219389.7150023
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            443.4018135070801
+        ],
+        "start_timestamp": 1712219390.5156727
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            143.91708374023438,
+            728.0449867248535
+        ],
+        "start_timestamp": 1712219391.316348
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            378.79395484924316
+        ],
+        "start_timestamp": 1712219392.1170056
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            462.99195289611816
+        ],
+        "start_timestamp": 1712219392.9176674
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            146.2380886077881,
+            564.5089149475098
+        ],
+        "start_timestamp": 1712219393.7183304
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            698.4329223632812
+        ],
+        "start_timestamp": 1712219394.5190043
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            431.99706077575684
+        ],
+        "start_timestamp": 1712219395.3196726
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            650.0918865203857
+        ],
+        "start_timestamp": 1712219396.1203418
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            451.22218132019043
+        ],
+        "start_timestamp": 1712219396.9210036
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            501.8620491027832
+        ],
+        "start_timestamp": 1712219397.721665
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            202.2838592529297
+        ],
+        "start_timestamp": 1712219398.522325
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            453.3658027648926
+        ],
+        "start_timestamp": 1712219399.3229866
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            323.3649730682373
+        ],
+        "start_timestamp": 1712219400.1236587
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            308.197021484375
+        ],
+        "start_timestamp": 1712219400.9243197
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            272.5040912628174
+        ],
+        "start_timestamp": 1712219401.7249846
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            290.42696952819824,
+            674.6129989624023
+        ],
+        "start_timestamp": 1712219402.525659
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            207.70812034606934,
+            608.7219715118408
+        ],
+        "start_timestamp": 1712219403.3263314
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            125.04196166992188,
+            476.15814208984375
+        ],
+        "start_timestamp": 1712219404.1269894
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            43.263912200927734,
+            395.98798751831055,
+            744.2469596862793
+        ],
+        "start_timestamp": 1712219404.9276485
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            296.48399353027344,
+            645.5450057983398
+        ],
+        "start_timestamp": 1712219405.7283092
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            180.82404136657715,
+            529.1140079498291
+        ],
+        "start_timestamp": 1712219406.528982
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            65.21487236022949,
+            412.9619598388672,
+            749.5629787445068
+        ],
+        "start_timestamp": 1712219407.3296542
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            280.0028324127197,
+            597.7330207824707
+        ],
+        "start_timestamp": 1712219408.1303267
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            114.56298828125,
+            414.6909713745117,
+            698.3969211578369
+        ],
+        "start_timestamp": 1712219408.9309843
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            231.7788600921631,
+            532.6399803161621
+        ],
+        "start_timestamp": 1712219409.7316568
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            39.68214988708496,
+            352.308988571167,
+            686.007022857666
+        ],
+        "start_timestamp": 1712219410.5323293
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219411.3330054
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            368.239164352417
+        ],
+        "start_timestamp": 1712219412.133675
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            168.60508918762207,
+            773.9601135253906
+        ],
+        "start_timestamp": 1712219412.934347
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            606.6420078277588
+        ],
+        "start_timestamp": 1712219413.735006
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            421.4210510253906
+        ],
+        "start_timestamp": 1712219414.535668
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            222.28097915649414
+        ],
+        "start_timestamp": 1712219415.3363369
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            359.3900203704834
+        ],
+        "start_timestamp": 1712219416.1369994
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            156.97383880615234,
+            741.5459156036377
+        ],
+        "start_timestamp": 1712219416.9376693
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            608.3240509033203
+        ],
+        "start_timestamp": 1712219417.7383423
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            442.5771236419678
+        ],
+        "start_timestamp": 1712219418.5390112
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            479.57611083984375
+        ],
+        "start_timestamp": 1712219419.339678
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            564.0089511871338
+        ],
+        "start_timestamp": 1712219420.140342
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            528.7320613861084
+        ],
+        "start_timestamp": 1712219420.9410155
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            513.4549140930176
+        ],
+        "start_timestamp": 1712219421.7416875
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            396.8770503997803
+        ],
+        "start_timestamp": 1712219422.542358
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            147.34601974487305,
+            759.1660022735596
+        ],
+        "start_timestamp": 1712219423.3430333
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            549.3259429931641
+        ],
+        "start_timestamp": 1712219424.1437042
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            349.5509624481201
+        ],
+        "start_timestamp": 1712219424.944371
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            551.1350631713867
+        ],
+        "start_timestamp": 1712219425.7450416
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            421.1127758026123
+        ],
+        "start_timestamp": 1712219426.5457053
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            736.4711761474609
+        ],
+        "start_timestamp": 1712219427.3463664
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            767.5340175628662
+        ],
+        "start_timestamp": 1712219428.1470432
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            588.0980491638184
+        ],
+        "start_timestamp": 1712219428.9477055
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            391.07418060302734
+        ],
+        "start_timestamp": 1712219429.7483668
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            205.84416389465332,
+            690.1891231536865
+        ],
+        "start_timestamp": 1712219430.5490403
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            409.49511528015137
+        ],
+        "start_timestamp": 1712219431.3497074
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            43.75600814819336,
+            494.31300163269043
+        ],
+        "start_timestamp": 1712219432.150378
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            108.57295989990234,
+            459.36107635498047,
+            743.3500289916992
+        ],
+        "start_timestamp": 1712219432.9510474
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            245.73516845703125,
+            546.4191436767578
+        ],
+        "start_timestamp": 1712219433.7517169
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            77.48603820800781,
+            511.3980770111084
+        ],
+        "start_timestamp": 1712219434.5523932
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            194.71096992492676
+        ],
+        "start_timestamp": 1712219435.3530548
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            746.9429969787598
+        ],
+        "start_timestamp": 1712219436.1537275
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219436.9543948
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            448.08483123779297
+        ],
+        "start_timestamp": 1712219437.7550542
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219438.5557153
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            68.78018379211426,
+            775.9230136871338
+        ],
+        "start_timestamp": 1712219439.3563836
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            601.1300086975098
+        ],
+        "start_timestamp": 1712219440.1570377
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            385.1189613342285
+        ],
+        "start_timestamp": 1712219440.957695
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            286.41295433044434
+        ],
+        "start_timestamp": 1712219441.7583606
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            119.74406242370605
+        ],
+        "start_timestamp": 1712219442.5590348
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            22.907018661499023,
+            688.7340545654297
+        ],
+        "start_timestamp": 1712219443.3596935
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            438.8298988342285
+        ],
+        "start_timestamp": 1712219444.1603646
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            259.3040466308594
+        ],
+        "start_timestamp": 1712219444.9610243
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            376.4920234680176
+        ],
+        "start_timestamp": 1712219445.7616937
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            124.57990646362305,
+            694.727897644043
+        ],
+        "start_timestamp": 1712219446.5623572
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            442.9030418395996
+        ],
+        "start_timestamp": 1712219447.3630276
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            776.5998840332031
+        ],
+        "start_timestamp": 1712219448.1636918
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219448.9643517
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            345.2479839324951
+        ],
+        "start_timestamp": 1712219449.7650607
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            78.72390747070312,
+            529.8008918762207
+        ],
+        "start_timestamp": 1712219450.565747
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            447.0980167388916
+        ],
+        "start_timestamp": 1712219451.3664117
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            181.5049648284912,
+            698.5411643981934
+        ],
+        "start_timestamp": 1712219452.1671433
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            432.31701850891113
+        ],
+        "start_timestamp": 1712219452.9678085
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            135.6360912322998,
+            652.9948711395264
+        ],
+        "start_timestamp": 1712219453.7684672
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            333.9581489562988
+        ],
+        "start_timestamp": 1712219454.5691383
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            70.68300247192383,
+            652.0719528198242
+        ],
+        "start_timestamp": 1712219455.3698049
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            621.8740940093994
+        ],
+        "start_timestamp": 1712219456.170478
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219456.9711404
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            170.67599296569824
+        ],
+        "start_timestamp": 1712219457.7718024
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            88.11497688293457
+        ],
+        "start_timestamp": 1712219458.5724618
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            22.850990295410156,
+            673.6531257629395
+        ],
+        "start_timestamp": 1712219459.3731198
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            543.8361167907715
+        ],
+        "start_timestamp": 1712219460.1738017
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            391.5829658508301
+        ],
+        "start_timestamp": 1712219460.9744618
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            308.8688850402832
+        ],
+        "start_timestamp": 1712219461.7751262
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            142.90595054626465,
+            713.2580280303955
+        ],
+        "start_timestamp": 1712219462.5758011
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            527.7690887451172
+        ],
+        "start_timestamp": 1712219463.376466
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            328.3100128173828
+        ],
+        "start_timestamp": 1712219464.1771271
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            95.64685821533203,
+            649.3349075317383
+        ],
+        "start_timestamp": 1712219464.9777932
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            347.1570014953613
+        ],
+        "start_timestamp": 1712219465.7784638
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            64.75996971130371,
+            531.836986541748
+        ],
+        "start_timestamp": 1712219466.5791352
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            184.29803848266602,
+            699.3510723114014
+        ],
+        "start_timestamp": 1712219467.3798048
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            383.72182846069336
+        ],
+        "start_timestamp": 1712219468.1804695
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            83.4660530090332,
+            537.5609397888184
+        ],
+        "start_timestamp": 1712219468.9811296
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            268.16296577453613,
+            703.218936920166
+        ],
+        "start_timestamp": 1712219469.7817957
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            369.4169521331787
+        ],
+        "start_timestamp": 1712219470.5824642
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            20.151853561401367,
+            453.46903800964355
+        ],
+        "start_timestamp": 1712219471.3831635
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            20.95198631286621,
+            457.69596099853516
+        ],
+        "start_timestamp": 1712219472.1838307
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            57.556867599487305,
+            589.5559787750244
+        ],
+        "start_timestamp": 1712219472.9845026
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            91.6299819946289,
+            439.6319389343262,
+            795.0899600982666
+        ],
+        "start_timestamp": 1712219473.785169
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219474.585829
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            291.24903678894043,
+            625.2470016479492
+        ],
+        "start_timestamp": 1712219475.386494
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            125.46110153198242,
+            443.2640075683594,
+            743.1070804595947
+        ],
+        "start_timestamp": 1712219476.187168
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            276.5350341796875,
+            629.8220157623291
+        ],
+        "start_timestamp": 1712219476.9878404
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            294.24500465393066
+        ],
+        "start_timestamp": 1712219477.7885027
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            44.91090774536133,
+            614.9249076843262
+        ],
+        "start_timestamp": 1712219478.5891707
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            365.1421070098877,
+            729.9399375915527
+        ],
+        "start_timestamp": 1712219479.3898387
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            346.8739986419678
+        ],
+        "start_timestamp": 1712219480.1905084
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            164.22796249389648,
+            797.1110343933105
+        ],
+        "start_timestamp": 1712219480.991169
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            685.3330135345459
+        ],
+        "start_timestamp": 1712219481.791839
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            500.05197525024414
+        ],
+        "start_timestamp": 1712219482.5925124
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            684.8149299621582
+        ],
+        "start_timestamp": 1712219483.393175
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            552.1550178527832
+        ],
+        "start_timestamp": 1712219484.193846
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            419.3458557128906
+        ],
+        "start_timestamp": 1712219484.994518
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219485.7951913
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            21.175861358642578,
+            724.8630523681641
+        ],
+        "start_timestamp": 1712219486.5958557
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            689.2409324645996
+        ],
+        "start_timestamp": 1712219487.3965223
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219488.1971886
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            175.95887184143066,
+            557.4119091033936
+        ],
+        "start_timestamp": 1712219488.9978585
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            575.3729343414307
+        ],
+        "start_timestamp": 1712219489.7985208
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            676.3570308685303
+        ],
+        "start_timestamp": 1712219490.5991902
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            660.6709957122803
+        ],
+        "start_timestamp": 1712219491.39985
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            711.5850448608398
+        ],
+        "start_timestamp": 1712219492.2005105
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219493.0011811
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            30.02309799194336,
+            629.9769878387451
+        ],
+        "start_timestamp": 1712219493.8018386
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            664.0961170196533
+        ],
+        "start_timestamp": 1712219494.6024961
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            532.351016998291
+        ],
+        "start_timestamp": 1712219495.4031603
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            552.0038604736328
+        ],
+        "start_timestamp": 1712219496.203825
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            433.945894241333
+        ],
+        "start_timestamp": 1712219497.0044932
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            370.21398544311523
+        ],
+        "start_timestamp": 1712219497.8051636
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            254.5459270477295
+        ],
+        "start_timestamp": 1712219498.6058204
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            486.130952835083
+        ],
+        "start_timestamp": 1712219499.4064767
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            553.7810325622559
+        ],
+        "start_timestamp": 1712219500.2071428
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            490.6589984893799
+        ],
+        "start_timestamp": 1712219501.007815
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            456.0990333557129
+        ],
+        "start_timestamp": 1712219501.8084807
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            459.2771530151367
+        ],
+        "start_timestamp": 1712219502.6091518
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            407.56797790527344
+        ],
+        "start_timestamp": 1712219503.409821
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            442.6109790802002
+        ],
+        "start_timestamp": 1712219504.2104836
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            459.21897888183594
+        ],
+        "start_timestamp": 1712219505.0111485
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            529.5209884643555
+        ],
+        "start_timestamp": 1712219505.8118083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            783.7920188903809
+        ],
+        "start_timestamp": 1712219506.6124687
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            712.6140594482422
+        ],
+        "start_timestamp": 1712219507.413128
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            663.5370254516602
+        ],
+        "start_timestamp": 1712219508.2137988
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            463.84501457214355
+        ],
+        "start_timestamp": 1712219509.0144641
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            331.48193359375
+        ],
+        "start_timestamp": 1712219509.8151221
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            315.3660297393799
+        ],
+        "start_timestamp": 1712219510.6157813
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            399.9669551849365
+        ],
+        "start_timestamp": 1712219511.4164414
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            517.8461074829102
+        ],
+        "start_timestamp": 1712219512.2171094
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            368.4840202331543
+        ],
+        "start_timestamp": 1712219513.0177808
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            486.1440658569336
+        ],
+        "start_timestamp": 1712219513.8184516
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219514.61912
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            304.93903160095215
+        ],
+        "start_timestamp": 1712219515.419786
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            658.8850021362305
+        ],
+        "start_timestamp": 1712219516.2204423
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            239.52078819274902,
+            576.6429901123047
+        ],
+        "start_timestamp": 1712219517.0211
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            374.798059463501
+        ],
+        "start_timestamp": 1712219517.8217702
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            158.08606147766113,
+            692.1560764312744
+        ],
+        "start_timestamp": 1712219518.6224291
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            326.03907585144043,
+            789.160966873169
+        ],
+        "start_timestamp": 1712219519.4230974
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            529.940128326416
+        ],
+        "start_timestamp": 1712219520.2237558
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            27.762174606323242,
+            361.01317405700684,
+            678.4460544586182
+        ],
+        "start_timestamp": 1712219521.024424
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            161.26203536987305,
+            615.2710914611816
+        ],
+        "start_timestamp": 1712219521.8250914
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            479.6559810638428
+        ],
+        "start_timestamp": 1712219522.6257508
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219523.4264083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            180.96518516540527
+        ],
+        "start_timestamp": 1712219524.2270763
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            165.42506217956543,
+            649.5399475097656
+        ],
+        "start_timestamp": 1712219525.0277421
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            566.8530464172363,
+            799.7720241546631
+        ],
+        "start_timestamp": 1712219525.828434
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            200.56915283203125,
+            387.3169422149658,
+            734.8179817199707
+        ],
+        "start_timestamp": 1712219526.6291206
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            103.8961410522461,
+            268.4051990509033,
+            602.2191047668457
+        ],
+        "start_timestamp": 1712219527.4297895
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            781.7661762237549
+        ],
+        "start_timestamp": 1712219528.2304811
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            320.004940032959,
+            765.1019096374512
+        ],
+        "start_timestamp": 1712219529.0311394
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            655.4219722747803
+        ],
+        "start_timestamp": 1712219529.8318005
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            207.91006088256836,
+            591.9821262359619
+        ],
+        "start_timestamp": 1712219530.6324606
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            256.18720054626465,
+            641.0880088806152
+        ],
+        "start_timestamp": 1712219531.4331303
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            507.72905349731445
+        ],
+        "start_timestamp": 1712219532.233796
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            243.94893646240234,
+            711.4379405975342
+        ],
+        "start_timestamp": 1712219533.034456
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            309.6439838409424,
+            712.3799324035645
+        ],
+        "start_timestamp": 1712219533.8351212
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            276.60107612609863
+        ],
+        "start_timestamp": 1712219534.6357796
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            444.57507133483887
+        ],
+        "start_timestamp": 1712219535.4364436
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            245.71490287780762,
+            745.6908226013184
+        ],
+        "start_timestamp": 1712219536.2371116
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            480.23295402526855
+        ],
+        "start_timestamp": 1712219537.0377815
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219537.8384469
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            484.5309257507324
+        ],
+        "start_timestamp": 1712219538.6391106
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            167.694091796875,
+            716.2199020385742
+        ],
+        "start_timestamp": 1712219539.439817
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            650.8440971374512
+        ],
+        "start_timestamp": 1712219540.2404864
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            300.2629280090332,
+            762.1738910675049
+        ],
+        "start_timestamp": 1712219541.0411415
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            484.9848747253418
+        ],
+        "start_timestamp": 1712219541.841808
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            101.9749641418457,
+            522.0820903778076
+        ],
+        "start_timestamp": 1712219542.6424692
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            219.98190879821777
+        ],
+        "start_timestamp": 1712219543.4431453
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219544.2438068
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            155.65109252929688,
+            706.1500549316406
+        ],
+        "start_timestamp": 1712219545.0444705
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219545.8451338
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            427.40416526794434
+        ],
+        "start_timestamp": 1712219546.6457899
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            494.3349361419678
+        ],
+        "start_timestamp": 1712219547.4464512
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            475.96192359924316
+        ],
+        "start_timestamp": 1712219548.2471154
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            543.5090065002441
+        ],
+        "start_timestamp": 1712219549.0477772
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219549.8484478
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            144.75703239440918,
+            662.3330116271973
+        ],
+        "start_timestamp": 1712219550.6491086
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            630.5010318756104
+        ],
+        "start_timestamp": 1712219551.4497695
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            513.9889717102051
+        ],
+        "start_timestamp": 1712219552.2504432
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            581.7980766296387
+        ],
+        "start_timestamp": 1712219553.0511131
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            549.2641925811768
+        ],
+        "start_timestamp": 1712219553.8517816
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            383.6820125579834
+        ],
+        "start_timestamp": 1712219554.6524568
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            500.9338855743408
+        ],
+        "start_timestamp": 1712219555.4531202
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219556.2537923
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            168.89119148254395,
+            588.9379978179932
+        ],
+        "start_timestamp": 1712219557.0544496
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            86.08698844909668,
+            573.3158588409424
+        ],
+        "start_timestamp": 1712219557.8551385
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            356.8999767303467
+        ],
+        "start_timestamp": 1712219558.6558154
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            572.6120471954346
+        ],
+        "start_timestamp": 1712219559.4564812
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            456.47192001342773
+        ],
+        "start_timestamp": 1712219560.2571406
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            223.87099266052246
+        ],
+        "start_timestamp": 1712219561.057803
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            41.53800010681152,
+            678.6630153656006
+        ],
+        "start_timestamp": 1712219561.8584645
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            459.4719409942627
+        ],
+        "start_timestamp": 1712219562.6591382
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219563.4598165
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            477.69618034362793
+        ],
+        "start_timestamp": 1712219564.260477
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            214.447021484375,
+            745.9909915924072
+        ],
+        "start_timestamp": 1712219565.061143
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219565.8618083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            380.62405586242676
+        ],
+        "start_timestamp": 1712219566.662477
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            80.78193664550781,
+            615.2689456939697
+        ],
+        "start_timestamp": 1712219567.4631636
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219568.2638538
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            133.44407081604004
+        ],
+        "start_timestamp": 1712219569.064527
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            116.8060302734375
+        ],
+        "start_timestamp": 1712219569.8651989
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            68.05682182312012,
+            504.4739246368408,
+            752.3448467254639
+        ],
+        "start_timestamp": 1712219570.6658692
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            151.9629955291748,
+            335.7861042022705,
+            502.9411315917969,
+            669.7311401367188
+        ],
+        "start_timestamp": 1712219571.4665408
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            41.18180274963379,
+            203.15790176391602,
+            386.74187660217285
+        ],
+        "start_timestamp": 1712219572.2671993
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            26.209115982055664,
+            524.4131088256836
+        ],
+        "start_timestamp": 1712219573.0678716
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            491.9149875640869
+        ],
+        "start_timestamp": 1712219573.8685303
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            222.60093688964844
+        ],
+        "start_timestamp": 1712219574.669203
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            624.8230934143066
+        ],
+        "start_timestamp": 1712219575.4698646
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            410.6729030609131
+        ],
+        "start_timestamp": 1712219576.2705355
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            592.5788879394531
+        ],
+        "start_timestamp": 1712219577.0711966
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            660.6230735778809
+        ],
+        "start_timestamp": 1712219577.8718612
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219578.6725192
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            228.50394248962402,
+            562.3259544372559
+        ],
+        "start_timestamp": 1712219579.4731772
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            46.12994194030762,
+            348.62208366394043,
+            663.323163986206
+        ],
+        "start_timestamp": 1712219580.2738512
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            550.4999160766602
+        ],
+        "start_timestamp": 1712219581.0745163
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            431.3390254974365
+        ],
+        "start_timestamp": 1712219581.875188
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            249.2959499359131
+        ],
+        "start_timestamp": 1712219582.6758456
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219583.4765105
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219584.2771769
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.7691802978515625
+        ],
+        "start_timestamp": 1712219585.0778356
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            352.42486000061035
+        ],
+        "start_timestamp": 1712219585.8784988
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            69.52810287475586,
+            637.3751163482666
+        ],
+        "start_timestamp": 1712219586.6791618
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            373.78787994384766
+        ],
+        "start_timestamp": 1712219587.4798315
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            39.16215896606445,
+            558.6581230163574
+        ],
+        "start_timestamp": 1712219588.2804933
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219589.081151
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            590.8849239349365
+        ],
+        "start_timestamp": 1712219589.881805
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219590.6824691
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            609.6408367156982
+        ],
+        "start_timestamp": 1712219591.4831285
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            429.32701110839844
+        ],
+        "start_timestamp": 1712219592.2837968
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            644.819974899292
+        ],
+        "start_timestamp": 1712219593.0844712
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            767.0860290527344
+        ],
+        "start_timestamp": 1712219593.885139
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            614.1088008880615
+        ],
+        "start_timestamp": 1712219594.6857965
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            399.83391761779785
+        ],
+        "start_timestamp": 1712219595.4864528
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            166.68987274169922,
+            668.2090759277344
+        ],
+        "start_timestamp": 1712219596.287154
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            332.2720527648926
+        ],
+        "start_timestamp": 1712219597.0878146
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            416.75281524658203
+        ],
+        "start_timestamp": 1712219597.888478
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            83.5869312286377,
+            503.9341449737549
+        ],
+        "start_timestamp": 1712219598.6891425
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            43.057918548583984,
+            451.71499252319336
+        ],
+        "start_timestamp": 1712219599.489807
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            469.4640636444092
+        ],
+        "start_timestamp": 1712219600.2904782
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            777.1100997924805
+        ],
+        "start_timestamp": 1712219601.0911384
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219601.8918054
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219602.692461
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            156.62312507629395,
+            751.1789798736572
+        ],
+        "start_timestamp": 1712219603.493127
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            658.109188079834
+        ],
+        "start_timestamp": 1712219604.2937956
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            325.20103454589844
+        ],
+        "start_timestamp": 1712219605.094459
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.705045700073242,
+            478.92117500305176
+        ],
+        "start_timestamp": 1712219605.8951213
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            146.26789093017578,
+            593.925952911377
+        ],
+        "start_timestamp": 1712219606.6957853
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            213.56582641601562,
+            755.9008598327637
+        ],
+        "start_timestamp": 1712219607.4964447
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            479.1378974914551
+        ],
+        "start_timestamp": 1712219608.2971063
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            180.00316619873047,
+            663.8669967651367
+        ],
+        "start_timestamp": 1712219609.0977674
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            316.85900688171387,
+            681.879997253418
+        ],
+        "start_timestamp": 1712219609.89844
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            331.326961517334
+        ],
+        "start_timestamp": 1712219610.6991522
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            148.50187301635742,
+            549.5419502258301
+        ],
+        "start_timestamp": 1712219611.499815
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            266.3710117340088
+        ],
+        "start_timestamp": 1712219612.3004856
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            83.56499671936035
+        ],
+        "start_timestamp": 1712219613.101154
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            87.16797828674316
+        ],
+        "start_timestamp": 1712219613.9018133
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            40.51399230957031,
+            620.6619739532471
+        ],
+        "start_timestamp": 1712219614.7024775
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219615.5031662
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            173.66600036621094,
+            755.5630207061768
+        ],
+        "start_timestamp": 1712219616.3038254
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            455.77311515808105
+        ],
+        "start_timestamp": 1712219617.1044931
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            172.79911041259766,
+            691.1830902099609
+        ],
+        "start_timestamp": 1712219617.9051569
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219618.7058318
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            107.66005516052246,
+            458.7969779968262
+        ],
+        "start_timestamp": 1712219619.5065024
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            125.67591667175293,
+            593.4329032897949
+        ],
+        "start_timestamp": 1712219620.3071682
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            210.12401580810547,
+            678.0350208282471
+        ],
+        "start_timestamp": 1712219621.1078367
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            277.62508392333984,
+            678.7490844726562
+        ],
+        "start_timestamp": 1712219621.9085066
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            296.144962310791,
+            713.5350704193115
+        ],
+        "start_timestamp": 1712219622.7091725
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            329.6329975128174,
+            713.8841152191162
+        ],
+        "start_timestamp": 1712219623.5099044
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            263.55791091918945,
+            650.5229473114014
+        ],
+        "start_timestamp": 1712219624.3105748
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            214.447021484375,
+            581.8932056427002
+        ],
+        "start_timestamp": 1712219625.1112373
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            148.7751007080078,
+            501.90114974975586
+        ],
+        "start_timestamp": 1712219625.9118972
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            517.1008110046387
+        ],
+        "start_timestamp": 1712219626.7125628
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            454.27680015563965
+        ],
+        "start_timestamp": 1712219627.5132203
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            301.61309242248535
+        ],
+        "start_timestamp": 1712219628.313888
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            469.7740077972412
+        ],
+        "start_timestamp": 1712219629.114547
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            40.064096450805664,
+            322.79300689697266,
+            588.4180068969727
+        ],
+        "start_timestamp": 1712219629.915213
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            38.574934005737305,
+            287.59098052978516,
+            539.513111114502
+        ],
+        "start_timestamp": 1712219630.7158833
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            439.62597846984863
+        ],
+        "start_timestamp": 1712219631.5165446
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            55.72319030761719,
+            506.7100524902344
+        ],
+        "start_timestamp": 1712219632.3172119
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            574.4340419769287
+        ],
+        "start_timestamp": 1712219633.1178792
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            292.21200942993164,
+            742.4740791320801
+        ],
+        "start_timestamp": 1712219633.9185522
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            295.6540584564209,
+            595.844030380249
+        ],
+        "start_timestamp": 1712219634.7192166
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            26.920080184936523,
+            277.41003036499023,
+            661.1249446868896
+        ],
+        "start_timestamp": 1712219635.5198882
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            113.20281028747559,
+            344.38085556030273,
+            528.1519889831543,
+            728.3849716186523
+        ],
+        "start_timestamp": 1712219636.320553
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            378.90100479125977,
+            629.1730403900146
+        ],
+        "start_timestamp": 1712219637.1212244
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            112.58888244628906,
+            296.1609363555908,
+            496.58894538879395,
+            680.5539131164551
+        ],
+        "start_timestamp": 1712219637.9218972
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            80.2609920501709,
+            498.0800151824951,
+            700.767993927002
+        ],
+        "start_timestamp": 1712219638.7225618
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            100.42095184326172,
+            231.49681091308594,
+            465.18492698669434,
+            685.7988834381104
+        ],
+        "start_timestamp": 1712219639.523226
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            81.83503150939941,
+            268.32008361816406,
+            415.7910346984863,
+            633.4831714630127
+        ],
+        "start_timestamp": 1712219640.3238876
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            49.8960018157959,
+            253.50618362426758,
+            450.1490592956543,
+            617.0799732208252
+        ],
+        "start_timestamp": 1712219641.1245456
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            42.41013526916504,
+            220.12710571289062,
+            535.4421138763428
+        ],
+        "start_timestamp": 1712219641.9252124
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            134.9349021911621,
+            586.0049724578857
+        ],
+        "start_timestamp": 1712219642.7258825
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            252.7458667755127,
+            722.9969501495361
+        ],
+        "start_timestamp": 1712219643.5265563
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            373.0030059814453
+        ],
+        "start_timestamp": 1712219644.3272233
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            6.2580108642578125,
+            438.5790824890137
+        ],
+        "start_timestamp": 1712219645.1278954
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            766.9928073883057
+        ],
+        "start_timestamp": 1712219645.92857
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            523.64182472229
+        ],
+        "start_timestamp": 1712219646.729239
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            209.8991870880127,
+            674.821138381958
+        ],
+        "start_timestamp": 1712219647.5299098
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            309.31878089904785,
+            777.6448726654053
+        ],
+        "start_timestamp": 1712219648.330569
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            425.76098442077637
+        ],
+        "start_timestamp": 1712219649.1312408
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            630.2859783172607
+        ],
+        "start_timestamp": 1712219649.931898
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            311.08999252319336,
+            755.8741569519043
+        ],
+        "start_timestamp": 1712219650.7325716
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            428.80702018737793
+        ],
+        "start_timestamp": 1712219651.5332417
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.934881210327148,
+            363.1739616394043,
+            730.5428981781006
+        ],
+        "start_timestamp": 1712219652.3339107
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            316.3621425628662
+        ],
+        "start_timestamp": 1712219653.1345735
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            331.9439888000488
+        ],
+        "start_timestamp": 1712219653.9352376
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            335.2367877960205
+        ],
+        "start_timestamp": 1712219654.7359083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            99.71904754638672,
+            603.9290428161621
+        ],
+        "start_timestamp": 1712219655.5365674
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            300.7321357727051
+        ],
+        "start_timestamp": 1712219656.3372312
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            535.3848934173584
+        ],
+        "start_timestamp": 1712219657.1378975
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            186.01703643798828,
+            656.5001010894775
+        ],
+        "start_timestamp": 1712219657.9385571
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            406.66794776916504
+        ],
+        "start_timestamp": 1712219658.739228
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            121.5970516204834,
+            605.2141189575195
+        ],
+        "start_timestamp": 1712219659.5398943
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            141.01195335388184,
+            441.56885147094727
+        ],
+        "start_timestamp": 1712219660.340565
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            106.00113868713379,
+            573.7400054931641
+        ],
+        "start_timestamp": 1712219661.1412313
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            226.6671657562256,
+            675.0421524047852
+        ],
+        "start_timestamp": 1712219661.9418948
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            141.29185676574707,
+            461.2619876861572
+        ],
+        "start_timestamp": 1712219662.742567
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            58.73298645019531,
+            509.4339847564697
+        ],
+        "start_timestamp": 1712219663.5432372
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            128.97181510925293
+        ],
+        "start_timestamp": 1712219664.3439121
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            295.0549125671387,
+            661.5619659423828
+        ],
+        "start_timestamp": 1712219665.1445746
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            228.22999954223633,
+            562.3228549957275
+        ],
+        "start_timestamp": 1712219665.9452455
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            646.5620994567871
+        ],
+        "start_timestamp": 1712219666.745906
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            433.58492851257324,
+            717.2601222991943
+        ],
+        "start_timestamp": 1712219667.546563
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            565.3359889984131
+        ],
+        "start_timestamp": 1712219668.3472266
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            399.1389274597168,
+            768.3770656585693
+        ],
+        "start_timestamp": 1712219669.1478884
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            567.3489570617676
+        ],
+        "start_timestamp": 1712219669.9485743
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            370.3460693359375
+        ],
+        "start_timestamp": 1712219670.7492526
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            201.5371322631836,
+            736.0351085662842
+        ],
+        "start_timestamp": 1712219671.549915
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            539.1860008239746
+        ],
+        "start_timestamp": 1712219672.3505797
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219673.1512399
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            254.64200973510742,
+            705.17897605896
+        ],
+        "start_timestamp": 1712219673.9518988
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            455.8560848236084
+        ],
+        "start_timestamp": 1712219674.752561
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            406.51512145996094
+        ],
+        "start_timestamp": 1712219675.5532181
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            123.95691871643066
+        ],
+        "start_timestamp": 1712219676.3538826
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            291.5918827056885,
+            591.994047164917
+        ],
+        "start_timestamp": 1712219677.1545475
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            175.41885375976562,
+            542.8218841552734
+        ],
+        "start_timestamp": 1712219677.9552047
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            209.95807647705078,
+            596.5769290924072
+        ],
+        "start_timestamp": 1712219678.755903
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            244.22502517700195,
+            578.1350135803223
+        ],
+        "start_timestamp": 1712219679.556576
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            211.80391311645508,
+            649.2290496826172
+        ],
+        "start_timestamp": 1712219680.357241
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            296.4649200439453,
+            746.9658851623535
+        ],
+        "start_timestamp": 1712219681.157902
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            414.48116302490234
+        ],
+        "start_timestamp": 1712219681.9585683
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            531.8701267242432
+        ],
+        "start_timestamp": 1712219682.7592402
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            432.5258731842041
+        ],
+        "start_timestamp": 1712219683.5599165
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            520.0290679931641
+        ],
+        "start_timestamp": 1712219684.3605816
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            567.9991245269775
+        ],
+        "start_timestamp": 1712219685.1612542
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            368.63088607788086
+        ],
+        "start_timestamp": 1712219685.9619253
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            19.640207290649414,
+            369.40598487854004,
+            706.1240673065186
+        ],
+        "start_timestamp": 1712219686.7625816
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            206.24184608459473,
+            473.3250141143799,
+            793.0219173431396
+        ],
+        "start_timestamp": 1712219687.563246
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            254.4419765472412,
+            471.59790992736816,
+            688.6739730834961
+        ],
+        "start_timestamp": 1712219688.3639028
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            121.74010276794434,
+            388.74006271362305,
+            539.2799377441406,
+            756.2949657440186
+        ],
+        "start_timestamp": 1712219689.164573
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            155.7450294494629,
+            339.93005752563477,
+            507.2588920593262,
+            690.9830570220947
+        ],
+        "start_timestamp": 1712219689.9652462
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            574.3720531463623
+        ],
+        "start_timestamp": 1712219690.7659185
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            542.9279804229736
+        ],
+        "start_timestamp": 1712219691.5665772
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            562.5629425048828
+        ],
+        "start_timestamp": 1712219692.3672392
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219693.1678975
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            177.70910263061523,
+            748.0559349060059
+        ],
+        "start_timestamp": 1712219693.968561
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219694.7692244
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            215.4979705810547,
+            697.2248554229736
+        ],
+        "start_timestamp": 1712219695.5698888
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            299.72100257873535
+        ],
+        "start_timestamp": 1712219696.3705618
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            83.3749771118164,
+            481.7991256713867,
+            793.0121421813965
+        ],
+        "start_timestamp": 1712219697.171229
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            251.78909301757812,
+            499.2392063140869,
+            716.8610095977783
+        ],
+        "start_timestamp": 1712219697.9718878
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            83.09602737426758,
+            316.3139820098877,
+            551.0530471801758,
+            717.2260284423828
+        ],
+        "start_timestamp": 1712219698.7725616
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            100.3119945526123,
+            334.26690101623535,
+            484.33589935302734
+        ],
+        "start_timestamp": 1712219699.5732265
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            269.42992210388184,
+            763.434886932373
+        ],
+        "start_timestamp": 1712219700.3738928
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            402.8961658477783,
+            767.2970294952393
+        ],
+        "start_timestamp": 1712219701.1745534
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            339.8089408874512,
+            704.6079635620117
+        ],
+        "start_timestamp": 1712219701.9752152
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            237.79606819152832,
+            605.3309440612793
+        ],
+        "start_timestamp": 1712219702.7758834
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            141.28899574279785,
+            489.501953125,
+            779.6828746795654
+        ],
+        "start_timestamp": 1712219703.5765448
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            306.4868450164795,
+            573.4949111938477,
+            771.0089683532715
+        ],
+        "start_timestamp": 1712219704.3772175
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            173.9499568939209,
+            357.4950695037842,
+            524.3380069732666
+        ],
+        "start_timestamp": 1712219705.1778893
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219705.9785535
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            142.08602905273438,
+            492.9769039154053
+        ],
+        "start_timestamp": 1712219706.7792232
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            27.080059051513672,
+            376.9690990447998,
+            711.1020088195801
+        ],
+        "start_timestamp": 1712219707.5798917
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            245.07689476013184,
+            561.6810321807861
+        ],
+        "start_timestamp": 1712219708.3805547
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            95.0460433959961,
+            463.0110263824463,
+            774.9989032745361
+        ],
+        "start_timestamp": 1712219709.1812184
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            346.2390899658203,
+            616.4839267730713
+        ],
+        "start_timestamp": 1712219709.9818864
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            115.98896980285645,
+            414.0939712524414,
+            650.7289409637451
+        ],
+        "start_timestamp": 1712219710.7825477
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            164.50119018554688,
+            448.5030174255371
+        ],
+        "start_timestamp": 1712219711.5832107
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            716.5210247039795
+        ],
+        "start_timestamp": 1712219712.383885
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            617.0899868011475
+        ],
+        "start_timestamp": 1712219713.1845484
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219713.9852054
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            655.2579402923584
+        ],
+        "start_timestamp": 1712219714.7858706
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            653.3820629119873
+        ],
+        "start_timestamp": 1712219715.5865314
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            286.6020202636719,
+            687.4499320983887
+        ],
+        "start_timestamp": 1712219716.387196
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            554.8179149627686
+        ],
+        "start_timestamp": 1712219717.187862
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            389.1618251800537
+        ],
+        "start_timestamp": 1712219717.988532
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            106.25791549682617,
+            610.0890636444092
+        ],
+        "start_timestamp": 1712219718.7892015
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            307.2469234466553,
+            752.4149417877197
+        ],
+        "start_timestamp": 1712219719.589866
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            459.28502082824707
+        ],
+        "start_timestamp": 1712219720.3905368
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            158.88595581054688,
+            626.4438629150391
+        ],
+        "start_timestamp": 1712219721.1912112
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            259.93800163269043,
+            694.4458484649658
+        ],
+        "start_timestamp": 1712219721.9918785
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            327.84199714660645,
+            745.3548908233643
+        ],
+        "start_timestamp": 1712219722.792537
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            412.31799125671387
+        ],
+        "start_timestamp": 1712219723.5932057
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            62.30902671813965,
+            513.2009983062744
+        ],
+        "start_timestamp": 1712219724.3938713
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            116.29819869995117,
+            531.5032005310059
+        ],
+        "start_timestamp": 1712219725.194539
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            698.9560127258301
+        ],
+        "start_timestamp": 1712219725.9952047
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            198.87614250183105,
+            532.8881740570068
+        ],
+        "start_timestamp": 1712219726.7958748
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            552.9971122741699
+        ],
+        "start_timestamp": 1712219727.596538
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            250.8409023284912,
+            702.491044998169
+        ],
+        "start_timestamp": 1712219728.3972127
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            369.0469264984131
+        ],
+        "start_timestamp": 1712219729.1978862
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            23.35500717163086,
+            419.85201835632324
+        ],
+        "start_timestamp": 1712219729.9985502
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            20.539045333862305,
+            570.7569122314453
+        ],
+        "start_timestamp": 1712219730.799222
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            505.20801544189453
+        ],
+        "start_timestamp": 1712219731.599899
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            205.66296577453613
+        ],
+        "start_timestamp": 1712219732.400558
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            389.7991180419922
+        ],
+        "start_timestamp": 1712219733.2012277
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            474.29394721984863,
+            778.3091068267822
+        ],
+        "start_timestamp": 1712219734.0018904
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            224.65801239013672,
+            428.3750057220459,
+            626.086950302124
+        ],
+        "start_timestamp": 1712219734.8025575
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            426.5170097351074,
+            713.4160995483398
+        ],
+        "start_timestamp": 1712219735.603227
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            563.3080005645752
+        ],
+        "start_timestamp": 1712219736.4038923
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            127.3961067199707
+        ],
+        "start_timestamp": 1712219737.2045567
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            161.58294677734375,
+            579.1280269622803
+        ],
+        "start_timestamp": 1712219738.0052242
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            46.655893325805664,
+            262.7909183502197,
+            446.5599060058594,
+            599.7908115386963,
+            774.3427753448486
+        ],
+        "start_timestamp": 1712219738.8058906
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            149.67608451843262,
+            283.16807746887207,
+            464.2040729522705
+        ],
+        "start_timestamp": 1712219739.6065485
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            97.97310829162598,
+            298.2151508331299,
+            465.38305282592773,
+            651.6330242156982
+        ],
+        "start_timestamp": 1712219740.4072154
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.263017654418945,
+            184.94701385498047,
+            349.15804862976074,
+            502.5660991668701,
+            652.5928974151611
+        ],
+        "start_timestamp": 1712219741.2078855
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.145000457763672,
+            166.28003120422363,
+            436.2030029296875,
+            617.1939373016357,
+            795.6669330596924
+        ],
+        "start_timestamp": 1712219742.008548
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            183.92109870910645,
+            351.20511054992676,
+            568.2289600372314,
+            762.6371383666992
+        ],
+        "start_timestamp": 1712219742.809209
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            121.57416343688965,
+            305.4070472717285,
+            468.9619541168213,
+            652.7271270751953
+        ],
+        "start_timestamp": 1712219743.6098664
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            20.34592628479004,
+            202.88896560668945,
+            389.35184478759766,
+            539.4790172576904
+        ],
+        "start_timestamp": 1712219744.410542
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            320.3849792480469,
+            671.7078685760498
+        ],
+        "start_timestamp": 1712219745.2112148
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            121.35696411132812,
+            288.1159782409668,
+            455.1420211791992,
+            675.4429340362549
+        ],
+        "start_timestamp": 1712219746.0118792
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            72.58009910583496,
+            239.5792007446289,
+            740.0181293487549
+        ],
+        "start_timestamp": 1712219746.8125408
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            209.23495292663574,
+            477.0050048828125,
+            775.0139236450195
+        ],
+        "start_timestamp": 1712219747.613206
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            327.15797424316406,
+            624.9489784240723
+        ],
+        "start_timestamp": 1712219748.4138646
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            178.21478843688965,
+            509.8409652709961
+        ],
+        "start_timestamp": 1712219749.2145283
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            43.437957763671875,
+            376.7719268798828,
+            781.0459136962891
+        ],
+        "start_timestamp": 1712219750.015187
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            545.2520847320557
+        ],
+        "start_timestamp": 1712219750.8158529
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            561.7990493774414
+        ],
+        "start_timestamp": 1712219751.6165242
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            757.1520805358887
+        ],
+        "start_timestamp": 1712219752.4171996
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            516.4010524749756
+        ],
+        "start_timestamp": 1712219753.2178648
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            267.12894439697266
+        ],
+        "start_timestamp": 1712219754.0185382
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            32.060861587524414
+        ],
+        "start_timestamp": 1712219754.819207
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            39.41202163696289,
+            619.3711757659912
+        ],
+        "start_timestamp": 1712219755.6198761
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            350.42405128479004
+        ],
+        "start_timestamp": 1712219756.4205766
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            651.9448757171631
+        ],
+        "start_timestamp": 1712219757.221242
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            736.2301349639893
+        ],
+        "start_timestamp": 1712219758.0219069
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            536.9231700897217
+        ],
+        "start_timestamp": 1712219758.8225703
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            487.6689910888672
+        ],
+        "start_timestamp": 1712219759.6232326
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            472.322940826416
+        ],
+        "start_timestamp": 1712219760.423894
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            743.3710098266602
+        ],
+        "start_timestamp": 1712219761.224558
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            677.0269870758057
+        ],
+        "start_timestamp": 1712219762.025227
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            575.3171443939209
+        ],
+        "start_timestamp": 1712219762.8258846
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            492.34604835510254
+        ],
+        "start_timestamp": 1712219763.6265569
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            529.5031070709229
+        ],
+        "start_timestamp": 1712219764.4272308
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            661.1170768737793
+        ],
+        "start_timestamp": 1712219765.2279012
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219766.0285711
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            228.85513305664062
+        ],
+        "start_timestamp": 1712219766.829227
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            463.3469581604004
+        ],
+        "start_timestamp": 1712219767.629889
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            97.25713729858398,
+            614.7019863128662
+        ],
+        "start_timestamp": 1712219768.43056
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            318.10688972473145
+        ],
+        "start_timestamp": 1712219769.231229
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            33.802032470703125,
+            652.9622077941895
+        ],
+        "start_timestamp": 1712219770.031897
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            300.2760410308838
+        ],
+        "start_timestamp": 1712219770.832564
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            71.44284248352051,
+            602.0429134368896
+        ],
+        "start_timestamp": 1712219771.6332238
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            335.62493324279785
+        ],
+        "start_timestamp": 1712219772.433892
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            42.455196380615234,
+            553.6670684814453
+        ],
+        "start_timestamp": 1712219773.2345579
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            253.97586822509766,
+            722.1548557281494
+        ],
+        "start_timestamp": 1712219774.03527
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            421.75889015197754
+        ],
+        "start_timestamp": 1712219774.8359578
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            55.81998825073242,
+            592.055082321167
+        ],
+        "start_timestamp": 1712219775.6366298
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            291.26501083374023,
+            782.9020023345947
+        ],
+        "start_timestamp": 1712219776.4373333
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            491.43314361572266
+        ],
+        "start_timestamp": 1712219777.2380006
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            225.0680923461914,
+            753.3321380615234
+        ],
+        "start_timestamp": 1712219778.0386746
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            479.4440269470215
+        ],
+        "start_timestamp": 1712219778.8393319
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            227.31304168701172,
+            745.089054107666
+        ],
+        "start_timestamp": 1712219779.6399922
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            478.50990295410156
+        ],
+        "start_timestamp": 1712219780.4406605
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            231.72593116760254
+        ],
+        "start_timestamp": 1712219781.2413232
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            380.01298904418945
+        ],
+        "start_timestamp": 1712219782.041994
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            99.60079193115234,
+            531.3918590545654
+        ],
+        "start_timestamp": 1712219782.8426576
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            131.4718723297119,
+            482.33699798583984,
+            732.7399253845215
+        ],
+        "start_timestamp": 1712219783.6433306
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            132.36498832702637,
+            599.9338626861572
+        ],
+        "start_timestamp": 1712219784.4439938
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            16.835927963256836,
+            200.29902458190918,
+            367.0659065246582,
+            486.8278503417969,
+            620.4218864440918
+        ],
+        "start_timestamp": 1712219785.244662
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            136.9180679321289
+        ],
+        "start_timestamp": 1712219786.0453217
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            338.46592903137207,
+            756.4599514007568
+        ],
+        "start_timestamp": 1712219786.8460252
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            289.4711494445801,
+            670.5830097198486
+        ],
+        "start_timestamp": 1712219787.64669
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219788.4473505
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            388.3790969848633
+        ],
+        "start_timestamp": 1712219789.2480114
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            725.7919311523438
+        ],
+        "start_timestamp": 1712219790.0486858
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            710.2060317993164
+        ],
+        "start_timestamp": 1712219790.8493576
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            641.6530609130859
+        ],
+        "start_timestamp": 1712219791.6500158
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            525.611162185669
+        ],
+        "start_timestamp": 1712219792.4506786
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            627.140998840332
+        ],
+        "start_timestamp": 1712219793.2513375
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            644.5910930633545
+        ],
+        "start_timestamp": 1712219794.0520096
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            579.2701244354248
+        ],
+        "start_timestamp": 1712219794.8526769
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219795.6533353
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.345987319946289,
+            647.1579074859619
+        ],
+        "start_timestamp": 1712219796.4539993
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            773.6148834228516
+        ],
+        "start_timestamp": 1712219797.2546628
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            682.7230453491211
+        ],
+        "start_timestamp": 1712219798.0553284
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            700.4120349884033
+        ],
+        "start_timestamp": 1712219798.8559897
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            620.1698780059814
+        ],
+        "start_timestamp": 1712219799.6566558
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            704.7979831695557
+        ],
+        "start_timestamp": 1712219800.4573236
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            703.1290531158447
+        ],
+        "start_timestamp": 1712219801.2579956
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            653.7718772888184
+        ],
+        "start_timestamp": 1712219802.0586648
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            654.494047164917
+        ],
+        "start_timestamp": 1712219802.8593314
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            555.2380084991455
+        ],
+        "start_timestamp": 1712219803.6600063
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            592.454195022583
+        ],
+        "start_timestamp": 1712219804.4606783
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            724.329948425293
+        ],
+        "start_timestamp": 1712219805.2613459
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            677.7257919311523
+        ],
+        "start_timestamp": 1712219806.0620613
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            642.6079273223877
+        ],
+        "start_timestamp": 1712219806.8627372
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            613.0080223083496
+        ],
+        "start_timestamp": 1712219807.663401
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            430.0119876861572
+        ],
+        "start_timestamp": 1712219808.4640725
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            194.7040557861328
+        ],
+        "start_timestamp": 1712219809.264736
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.649971008300781,
+            629.7049522399902
+        ],
+        "start_timestamp": 1712219810.0654058
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            466.3379192352295
+        ],
+        "start_timestamp": 1712219810.866075
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            214.5240306854248
+        ],
+        "start_timestamp": 1712219811.666735
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            32.05704689025879,
+            582.421064376831
+        ],
+        "start_timestamp": 1712219812.4674013
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            368.8769340515137
+        ],
+        "start_timestamp": 1712219813.2680683
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            503.3438205718994
+        ],
+        "start_timestamp": 1712219814.0687408
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            134.23991203308105,
+            501.5878677368164,
+            718.8639640808105
+        ],
+        "start_timestamp": 1712219814.8694112
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            102.3709774017334,
+            271.35491371154785,
+            452.394962310791,
+            622.2848892211914,
+            763.6260986328125
+        ],
+        "start_timestamp": 1712219815.6700711
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            136.90876960754395,
+            303.0729293823242,
+            471.12298011779785,
+            620.3579902648926,
+            789.4959449768066
+        ],
+        "start_timestamp": 1712219816.470744
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            170.31002044677734,
+            353.9271354675293,
+            523.7710475921631,
+            688.5960102081299
+        ],
+        "start_timestamp": 1712219817.2714071
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            55.24897575378418,
+            221.79508209228516,
+            374.43017959594727,
+            538.6450290679932,
+            755.958080291748
+        ],
+        "start_timestamp": 1712219818.07207
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            122.83182144165039,
+            273.162841796875,
+            690.4528141021729
+        ],
+        "start_timestamp": 1712219818.872731
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            306.7607879638672,
+            573.9428997039795
+        ],
+        "start_timestamp": 1712219819.6734023
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            177.10208892822266,
+            558.3600997924805,
+            794.1842079162598
+        ],
+        "start_timestamp": 1712219820.4740648
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            375.3499984741211,
+            753.4310817718506
+        ],
+        "start_timestamp": 1712219821.2747219
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            175.96912384033203,
+            393.21398735046387,
+            593.5299396514893
+        ],
+        "start_timestamp": 1712219822.0753944
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            27.4200439453125,
+            244.48704719543457,
+            577.880859375
+        ],
+        "start_timestamp": 1712219822.8760552
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            144.67620849609375
+        ],
+        "start_timestamp": 1712219823.6767306
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            178.50399017333984,
+            379.4839382171631,
+            529.473066329956,
+            696.26784324646
+        ],
+        "start_timestamp": 1712219824.4773972
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            30.014991760253906,
+            180.21321296691895,
+            363.2512092590332,
+            530.3971767425537
+        ],
+        "start_timestamp": 1712219825.2780674
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            467.46015548706055,
+            615.1840686798096,
+            781.5630435943604
+        ],
+        "start_timestamp": 1712219826.0787299
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            131.5469741821289,
+            281.9409370422363,
+            384.6278190612793
+        ],
+        "start_timestamp": 1712219826.8794036
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            132.9188346862793,
+            268.85485649108887,
+            416.2180423736572
+        ],
+        "start_timestamp": 1712219827.6800783
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            419.7559356689453,
+            633.991003036499,
+            787.510871887207
+        ],
+        "start_timestamp": 1712219828.4807413
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            150.81000328063965,
+            318.00007820129395,
+            468.1980609893799,
+            635.8909606933594,
+            786.8361473083496
+        ],
+        "start_timestamp": 1712219829.2814062
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            201.9820213317871,
+            355.7929992675781
+        ],
+        "start_timestamp": 1712219830.0820796
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            503.6449432373047,
+            637.8729343414307
+        ],
+        "start_timestamp": 1712219830.8827376
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            6.231069564819336,
+            154.2201042175293,
+            290.0731563568115
+        ],
+        "start_timestamp": 1712219831.6834056
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            290.5569076538086,
+            705.5330276489258
+        ],
+        "start_timestamp": 1712219832.4840808
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            105.54194450378418,
+            272.3870277404785,
+            439.53490257263184,
+            606.3048839569092
+        ],
+        "start_timestamp": 1712219833.2847404
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            456.89988136291504
+        ],
+        "start_timestamp": 1712219834.085401
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            374.36509132385254
+        ],
+        "start_timestamp": 1712219834.886074
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            659.512996673584
+        ],
+        "start_timestamp": 1712219835.6867318
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            461.2231254577637
+        ],
+        "start_timestamp": 1712219836.4873893
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            661.3719463348389
+        ],
+        "start_timestamp": 1712219837.2880607
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            756.2081813812256
+        ],
+        "start_timestamp": 1712219838.0887403
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            313.230037689209
+        ],
+        "start_timestamp": 1712219838.8894083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            46.797990798950195,
+            513.922929763794
+        ],
+        "start_timestamp": 1712219839.690079
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            247.46084213256836,
+            667.5419807434082
+        ],
+        "start_timestamp": 1712219840.4907503
+    },
+    {
+        "is_mountain": true,
+        "responses": [],
+        "start_timestamp": 1712219841.2914197
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            152.724027633667,
+            484.144926071167,
+            750.3018379211426
+        ],
+        "start_timestamp": 1712219842.0920918
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            152.82702445983887,
+            319.7019100189209,
+            500.7131099700928,
+            668.0190563201904
+        ],
+        "start_timestamp": 1712219842.8927526
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            40.20810127258301,
+            217.81301498413086,
+            387.7439498901367,
+            568.6299800872803,
+            735.4400157928467
+        ],
+        "start_timestamp": 1712219843.693421
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            168.44701766967773,
+            318.79591941833496,
+            502.4409294128418,
+            672.3098754882812
+        ],
+        "start_timestamp": 1712219844.4940813
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            55.21392822265625,
+            236.73486709594727
+        ],
+        "start_timestamp": 1712219845.294744
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            240.4019832611084,
+            587.805986404419,
+            796.8270778656006
+        ],
+        "start_timestamp": 1712219846.0954077
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            188.24505805969238,
+            388.46707344055176,
+            572.242021560669
+        ],
+        "start_timestamp": 1712219846.8960762
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            408.7491035461426
+        ],
+        "start_timestamp": 1712219847.6967447
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            76.21908187866211,
+            593.6400890350342
+        ],
+        "start_timestamp": 1712219848.4974098
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            524.8470306396484
+        ],
+        "start_timestamp": 1712219849.2980797
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            445.41096687316895
+        ],
+        "start_timestamp": 1712219850.098753
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            212.4459743499756
+        ],
+        "start_timestamp": 1712219850.899426
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            113.27695846557617,
+            630.4309368133545
+        ],
+        "start_timestamp": 1712219851.700096
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            461.67993545532227
+        ],
+        "start_timestamp": 1712219852.500783
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            178.5888671875
+        ],
+        "start_timestamp": 1712219853.3014858
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            249.1450309753418,
+            647.0301151275635
+        ],
+        "start_timestamp": 1712219854.102147
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            133.51702690124512,
+            450.82616806030273
+        ],
+        "start_timestamp": 1712219854.9028277
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            301.3880252838135,
+            718.6150550842285
+        ],
+        "start_timestamp": 1712219855.703529
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            332.9169750213623,
+            700.3810405731201
+        ],
+        "start_timestamp": 1712219856.5041876
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            684.3109130859375
+        ],
+        "start_timestamp": 1712219857.3048477
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            251.1899471282959,
+            618.6699867248535
+        ],
+        "start_timestamp": 1712219858.1055117
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            187.71600723266602
+        ],
+        "start_timestamp": 1712219858.9061813
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            169.4028377532959,
+            503.45802307128906
+        ],
+        "start_timestamp": 1712219859.706844
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            21.194934844970703,
+            337.12196350097656,
+            671.3268756866455
+        ],
+        "start_timestamp": 1712219860.5075133
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            171.10490798950195,
+            491.2109375,
+            800.0979423522949
+        ],
+        "start_timestamp": 1712219861.308177
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            355.90386390686035,
+            659.0478420257568
+        ],
+        "start_timestamp": 1712219862.108843
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            206.59303665161133,
+            543.5960292816162
+        ],
+        "start_timestamp": 1712219862.9095154
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            74.41496849060059,
+            407.8409671783447,
+            752.525806427002
+        ],
+        "start_timestamp": 1712219863.7101896
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            278.8701057434082
+        ],
+        "start_timestamp": 1712219864.5108514
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            610.5329990386963
+        ],
+        "start_timestamp": 1712219865.3115122
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219866.112176
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.417989730834961,
+            756.2408447265625
+        ],
+        "start_timestamp": 1712219866.912842
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            746.58203125
+        ],
+        "start_timestamp": 1712219867.7135072
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            649.986982345581
+        ],
+        "start_timestamp": 1712219868.514164
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            564.7799968719482
+        ],
+        "start_timestamp": 1712219869.3148248
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            381.88791275024414
+        ],
+        "start_timestamp": 1712219870.1154895
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            266.87097549438477
+        ],
+        "start_timestamp": 1712219870.9161592
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            484.87305641174316
+        ],
+        "start_timestamp": 1712219871.7168207
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            755.1369667053223
+        ],
+        "start_timestamp": 1712219872.5174959
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219873.3181636
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            6.382942199707031,
+            756.889820098877
+        ],
+        "start_timestamp": 1712219874.1188176
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            721.6429710388184
+        ],
+        "start_timestamp": 1712219874.9194872
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            756.1500072479248
+        ],
+        "start_timestamp": 1712219875.7201467
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219876.520818
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            106.40501976013184,
+            674.156904220581
+        ],
+        "start_timestamp": 1712219877.3214808
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            508.21614265441895
+        ],
+        "start_timestamp": 1712219878.1221418
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            442.0650005340576
+        ],
+        "start_timestamp": 1712219878.9228022
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            376.27720832824707
+        ],
+        "start_timestamp": 1712219879.7234735
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            397.003173828125
+        ],
+        "start_timestamp": 1712219880.5241303
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            364.7029399871826
+        ],
+        "start_timestamp": 1712219881.3247888
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            579.9210071563721
+        ],
+        "start_timestamp": 1712219882.1254585
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            614.3522262573242
+        ],
+        "start_timestamp": 1712219882.9261298
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            631.627082824707
+        ],
+        "start_timestamp": 1712219883.7267902
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            619.0760135650635
+        ],
+        "start_timestamp": 1712219884.5274632
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            617.0268058776855
+        ],
+        "start_timestamp": 1712219885.32813
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            467.7128791809082
+        ],
+        "start_timestamp": 1712219886.128792
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            368.2892322540283
+        ],
+        "start_timestamp": 1712219886.92946
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            352.4599075317383
+        ],
+        "start_timestamp": 1712219887.730119
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            253.09395790100098
+        ],
+        "start_timestamp": 1712219888.5307813
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            321.03610038757324
+        ],
+        "start_timestamp": 1712219889.3314464
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            174.7720241546631,
+            705.9249877929688
+        ],
+        "start_timestamp": 1712219890.1321046
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            590.4819965362549
+        ],
+        "start_timestamp": 1712219890.932766
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            440.9019947052002
+        ],
+        "start_timestamp": 1712219891.7334318
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            357.7730655670166
+        ],
+        "start_timestamp": 1712219892.5340934
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            678.7068843841553
+        ],
+        "start_timestamp": 1712219893.3347592
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            526.9811153411865
+        ],
+        "start_timestamp": 1712219894.1354327
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            477.9210090637207
+        ],
+        "start_timestamp": 1712219894.9361274
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            211.34114265441895,
+            728.8570404052734
+        ],
+        "start_timestamp": 1712219895.7367952
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            362.3189926147461,
+            778.8188457489014
+        ],
+        "start_timestamp": 1712219896.537461
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            363.9819622039795
+        ],
+        "start_timestamp": 1712219897.3381197
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            364.3980026245117
+        ],
+        "start_timestamp": 1712219898.1387904
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            84.56778526306152,
+            482.2049140930176
+        ],
+        "start_timestamp": 1712219898.9394555
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            33.59699249267578,
+            282.642126083374,
+            566.5750503540039,
+            792.1621799468994
+        ],
+        "start_timestamp": 1712219899.7401152
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            251.04188919067383,
+            484.15398597717285,
+            617.7699565887451
+        ],
+        "start_timestamp": 1712219900.5407815
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            798.8619804382324
+        ],
+        "start_timestamp": 1712219901.3414497
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            602.8389930725098
+        ],
+        "start_timestamp": 1712219902.1421108
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            656.2318801879883
+        ],
+        "start_timestamp": 1712219902.9427855
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            588.1340503692627
+        ],
+        "start_timestamp": 1712219903.7434447
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            471.91882133483887
+        ],
+        "start_timestamp": 1712219904.5441108
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            456.2540054321289
+        ],
+        "start_timestamp": 1712219905.3447833
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            440.34695625305176
+        ],
+        "start_timestamp": 1712219906.1454499
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            291.60499572753906
+        ],
+        "start_timestamp": 1712219906.946124
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            94.61712837219238,
+            609.8189353942871
+        ],
+        "start_timestamp": 1712219907.7467954
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            443.42613220214844
+        ],
+        "start_timestamp": 1712219908.547459
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            313.64893913269043
+        ],
+        "start_timestamp": 1712219909.3481197
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            244.80509757995605
+        ],
+        "start_timestamp": 1712219910.148795
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            81.66098594665527,
+            713.9849662780762
+        ],
+        "start_timestamp": 1712219910.9494681
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            630.8097839355469
+        ],
+        "start_timestamp": 1712219911.7501314
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            383.61382484436035
+        ],
+        "start_timestamp": 1712219912.5508008
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            682.6651096343994
+        ],
+        "start_timestamp": 1712219913.3514614
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            449.50413703918457
+        ],
+        "start_timestamp": 1712219914.152123
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219914.9527857
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            103.80697250366211,
+            638.1189823150635
+        ],
+        "start_timestamp": 1712219915.7534468
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            794.1958904266357
+        ],
+        "start_timestamp": 1712219916.5541189
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            536.9119644165039
+        ],
+        "start_timestamp": 1712219917.3547838
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            640.7220363616943
+        ],
+        "start_timestamp": 1712219918.1554544
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            591.7859077453613
+        ],
+        "start_timestamp": 1712219918.9561262
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            723.4489917755127
+        ],
+        "start_timestamp": 1712219919.7567918
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            591.2740230560303
+        ],
+        "start_timestamp": 1712219920.5574617
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            527.8198719024658
+        ],
+        "start_timestamp": 1712219921.3581188
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            525.9370803833008
+        ],
+        "start_timestamp": 1712219922.1587958
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            527.752161026001
+        ],
+        "start_timestamp": 1712219922.9594586
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            527.9529094696045
+        ],
+        "start_timestamp": 1712219923.7601247
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            382.1079730987549
+        ],
+        "start_timestamp": 1712219924.5607977
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            429.8391342163086
+        ],
+        "start_timestamp": 1712219925.3614671
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            480.47590255737305
+        ],
+        "start_timestamp": 1712219926.1621292
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            431.2918186187744
+        ],
+        "start_timestamp": 1712219926.9627886
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219927.7634528
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            416.6078567504883
+        ],
+        "start_timestamp": 1712219928.564116
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            133.72087478637695,
+            617.9218292236328
+        ],
+        "start_timestamp": 1712219929.3647738
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            270.77293395996094,
+            652.1010398864746
+        ],
+        "start_timestamp": 1712219930.1654418
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            402.81009674072266,
+            669.8439121246338
+        ],
+        "start_timestamp": 1712219930.96611
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            86.23886108398438,
+            286.61584854125977,
+            521.9569206237793,
+            704.185962677002
+        ],
+        "start_timestamp": 1712219931.766777
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            291.0289764404297,
+            557.4359893798828,
+            764.840841293335
+        ],
+        "start_timestamp": 1712219932.567439
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            355.3299903869629,
+            555.6049346923828,
+            764.1830444335938
+        ],
+        "start_timestamp": 1712219933.3681083
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            292.3130989074707,
+            623.5380172729492
+        ],
+        "start_timestamp": 1712219934.1687806
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            206.83598518371582,
+            590.7020568847656,
+            794.8341369628906
+        ],
+        "start_timestamp": 1712219934.9694438
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            174.47590827941895
+        ],
+        "start_timestamp": 1712219935.7701092
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            25.694847106933594,
+            626.349925994873
+        ],
+        "start_timestamp": 1712219936.5707695
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            293.2860851287842,
+            713.3400440216064
+        ],
+        "start_timestamp": 1712219937.3714345
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            311.2640380859375,
+            680.6459426879883
+        ],
+        "start_timestamp": 1712219938.1721027
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            228.2698154449463,
+            595.9558486938477
+        ],
+        "start_timestamp": 1712219938.972764
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            95.41487693786621,
+            446.35510444641113,
+            766.8519020080566
+        ],
+        "start_timestamp": 1712219939.7734387
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            297.3921298980713,
+            647.3941802978516
+        ],
+        "start_timestamp": 1712219940.5740988
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            183.42995643615723,
+            501.01494789123535,
+            773.533821105957
+        ],
+        "start_timestamp": 1712219941.3747673
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            515.8708095550537
+        ],
+        "start_timestamp": 1712219942.1754403
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            569.7340965270996
+        ],
+        "start_timestamp": 1712219942.9761024
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            267.33994483947754,
+            734.9121570587158
+        ],
+        "start_timestamp": 1712219943.7767637
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            287.78910636901855,
+            652.2431373596191
+        ],
+        "start_timestamp": 1712219944.577433
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            85.85786819458008,
+            319.61894035339355,
+            536.2458229064941
+        ],
+        "start_timestamp": 1712219945.3781078
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            119.88186836242676,
+            336.8079662322998,
+            503.9958953857422,
+            720.8399772644043
+        ],
+        "start_timestamp": 1712219946.1787753
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            137.59803771972656,
+            338.29402923583984,
+            555.1929473876953,
+            752.8870105743408
+        ],
+        "start_timestamp": 1712219946.9794464
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            305.8750629425049,
+            505.5859088897705,
+            705.8360576629639
+        ],
+        "start_timestamp": 1712219947.7801435
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            139.19305801391602,
+            339.5090103149414,
+            540.7969951629639,
+            726.8228530883789
+        ],
+        "start_timestamp": 1712219948.5808115
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            126.61600112915039,
+            324.0320682525635,
+            474.2541313171387,
+            641.2231922149658
+        ],
+        "start_timestamp": 1712219949.3814785
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            93.61004829406738,
+            294.1889762878418,
+            494.62294578552246,
+            708.7929248809814
+        ],
+        "start_timestamp": 1712219950.1821542
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            75.03581047058105,
+            292.04797744750977,
+            476.6578674316406,
+            679.0130138397217
+        ],
+        "start_timestamp": 1712219950.9828308
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            62.194108963012695,
+            276.44896507263184,
+            494.86589431762695,
+            693.9671039581299
+        ],
+        "start_timestamp": 1712219951.783509
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            93.80388259887695,
+            294.2328453063965,
+            478.3589839935303,
+            614.6957874298096
+        ],
+        "start_timestamp": 1712219952.584182
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            50.724029541015625,
+            244.87996101379395,
+            445.33300399780273,
+            628.9739608764648
+        ],
+        "start_timestamp": 1712219953.3848515
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            148.41198921203613,
+            363.0650043487549,
+            513.8919353485107,
+            713.5031223297119
+        ],
+        "start_timestamp": 1712219954.1855204
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            96.77886962890625,
+            246.86694145202637,
+            583.4319591522217,
+            758.3298683166504
+        ],
+        "start_timestamp": 1712219954.9861958
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            131.76703453063965,
+            314.7168159484863,
+            498.20780754089355,
+            682.0728778839111
+        ],
+        "start_timestamp": 1712219955.78687
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            50.99010467529297,
+            234.59315299987793,
+            415.7540798187256,
+            582.4921131134033,
+            717.3202037811279
+        ],
+        "start_timestamp": 1712219956.5875418
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            99.14994239807129,
+            282.98401832580566,
+            450.45995712280273,
+            650.4659652709961
+        ],
+        "start_timestamp": 1712219957.3882158
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            41.69607162475586,
+            233.84809494018555,
+            420.16100883483887,
+            584.4731330871582,
+            754.3530464172363
+        ],
+        "start_timestamp": 1712219958.1888783
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            153.87988090515137,
+            318.99380683898926,
+            518.500804901123,
+            702.1667957305908
+        ],
+        "start_timestamp": 1712219958.9895527
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            104.45690155029297,
+            318.9430236816406,
+            502.8879642486572,
+            719.9749946594238
+        ],
+        "start_timestamp": 1712219959.7902224
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            119.81797218322754,
+            320.026159286499,
+            520.3940868377686,
+            704.0531635284424
+        ],
+        "start_timestamp": 1712219960.5908856
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            407.1331024169922
+        ],
+        "start_timestamp": 1712219961.3915536
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            272.34601974487305,
+            796.1211204528809
+        ],
+        "start_timestamp": 1712219962.1922174
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            372.7741241455078,
+            755.3541660308838
+        ],
+        "start_timestamp": 1712219962.992896
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            374.5119571685791
+        ],
+        "start_timestamp": 1712219963.7936156
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            391.4661407470703
+        ],
+        "start_timestamp": 1712219964.5942843
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            325.8049488067627
+        ],
+        "start_timestamp": 1712219965.3949542
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            529.8769474029541
+        ],
+        "start_timestamp": 1712219966.1956234
+    },
+    {
+        "is_mountain": true,
+        "responses": [
+            397.3808288574219
+        ],
+        "start_timestamp": 1712219966.9962928
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            729.0158271789551
+        ],
+        "start_timestamp": 1712219967.796967
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            782.7069759368896
+        ],
+        "start_timestamp": 1712219968.5976312
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219969.3982954
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            50.18305778503418
+        ],
+        "start_timestamp": 1712219970.1989589
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            315.14811515808105
+        ],
+        "start_timestamp": 1712219970.9996176
+    },
+    {
+        "is_mountain": false,
+        "responses": [],
+        "start_timestamp": 1712219971.8002908
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            183.54105949401855,
+            734.5609664916992
+        ],
+        "start_timestamp": 1712219972.6009638
+    },
+    {
+        "is_mountain": false,
+        "responses": [
+            654.8008918762207
+        ],
+        "start_timestamp": 1712219973.4016824
+    }
+]
