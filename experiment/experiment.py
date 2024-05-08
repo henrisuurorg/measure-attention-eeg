@@ -166,6 +166,10 @@ def label(response_times: List[Optional[float]], start_timestamps: List[float], 
     """Label responses w.r.t RTV aka the trial to trial variation in response time"""
     response_times = np.array(response_times, dtype=float)
 
+    # Remove mountain trials
+    mask = np.array(is_mountains, dtype=bool)
+    response_times[mask] = np.nan
+
     # Z-tranform the sequence
     z_normalized_rt = (response_times - np.nanmean(response_times)) / np.nanstd(response_times)
 
